@@ -13,6 +13,7 @@ author:
         url: https://www.srk.com/es/contactenos/chile
 format:
   html:
+    css: styles/srk.css
     echo: false
     embed-resources: false
 jupyter: python3
@@ -106,6 +107,7 @@ Note that newer versions of Python are available.
 3.	Make sure to check the box "Add Python 3.10 to PATH" before clicking "Cuztomize Installation". This step is crucial as it makes Python accessible from the command line.
 4.	Customize the install location by creating a new folder at the root of your C:/ drive named “Python310”. The closer to the root, the easier it will be to find it.
 5.	Click on “Disable path length limit” and then “Close”.
+
 ![](./media/Figure 3-1.png)
 
 ::: {.callout-note}
@@ -119,6 +121,7 @@ New versions of Python are available every year. You will eventually need to upg
 We will install Visual Studio Code (VS Code) that is a free, open-source, powerful code editor that runs on your desktop and is available for Windows, macOS, and Linux. It comes with built-in support for several languages, including Python.
 
 1.	Go to [Visual Studio Code](https://code.visualstudio.com/) or to the folder provided with this course ``StartCodingToday/Step2/VSCodeUserSetup-x64-1.89.1.exe``
+
 ![](./media/Figure 3-2.png)
 
 ::: {.callout-note}
@@ -148,20 +151,25 @@ You can also change the color scheme of your interface to suit your preferences.
 Many extensions are available for VS Code, clic on the icon   of the left of the screen, and in the search bar enter:
 
 1.	**Python** and **Python Extension Pack** in order for VS code to read python.
+
 ![](./media/Figure 3-5.png)
 
 2.	**Jupyter**: Click on the first one and click on “Install”. It will automatically install four additional extensions as a pack. This extension will allow us to use Jupyter Notebook inside the VS Code environment.
+
 ![](./media/Figure 3-6.png)
 
 3. **Vscode-icons**: This extension allows you to see familiar icons for CSV, text, Jupyter Notebook, etc., in the explorer window, providing a better initial view instead of relying only on file extensions.
+
 ![](./media/Figure 3-7.png)
 
 4.	**GitHub repositories**: This extension allows to quickly browse, search, edit , and commit to Github directly from Visual Studio Code.
+
 ![](./media/Figure 3-8.png)
 
 ## Configure the Terminal 
 
 You can access the terminal at the top of the window and select “New terminal”, which will open at the bottom. Alternatively, use the shortcut ``Ctrl+``.
+
 ![](./media/Figure 3-9.png)
 
 Make sure to select Command Prompt, and set it as the default because note that if you close the terminal window, you will revert to Powershell and the environment will not be activated.
@@ -953,5 +961,3 @@ These AI are very useful to help you understand error logs, create functions, cr
 ![](./media/Figure 6-1.png)
 
 You can also connect to this repository to search for functions that have been developed within SRK CL [here](https://srkfunctionrepository.azurewebsites.net/). You also upload your own creations. 
-
-Start making your own scripts!
