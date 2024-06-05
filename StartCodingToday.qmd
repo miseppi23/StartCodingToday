@@ -1,6 +1,6 @@
 ---
 title: "**Start Coding Today**: Create Web Apps with Python and Onecode"
-subtitle: Initiation to Python language, Jupyter Notebook, GitHub, VS Code and OneCode
+subtitle: Initiation to Python language, Jupyter Notebook, GitHub, VS Code, and OneCode
 date: 4 June 2024
 author:
   - name: Marion Iseppi, Senior Consultant 
@@ -29,76 +29,84 @@ Welcome to the *Start Coding Today* course! This course is designed to guide you
 ## Course Overview
 Throughout this course, you will:
 
-1.	**Set up GitHub**: Learn how to create a GitHub account, install GitHub Desktop, and configure Git for version control.
-
-2.	**Create a Python Environment**: Install Python, set up Visual Studio Code (VS Code), and configure your terminal and Python environment.
-
-3.	**Create a Python Script**: Write and execute Python code using Jupyter Notebook within VS Code, and learn essential coding practices.
-
-4.	**Create Web Apps with Onecode**: Transform your Jupyter Notebook into a Python script, prepare your project for Onecode, and add necessary components like inputs, outputs, and buttons.
-
-5.	**Deploy a Web App using Onecode**: Deploy your web application and make it accessible to users.
-
+1. **Set up GitHub**: Learn how to create a GitHub account, install GitHub Desktop, and configure Git for version control.
+2. **Create a Python Environment**: Install Python, set up Visual Studio Code (VS Code), and configure your terminal and Python environment.
+3. **Create a Python Script**: Write and execute Python code using Jupyter Notebook within VS Code, and learn essential coding practices.
+4. **Create Web Apps with Onecode**: Transform your Jupyter Notebook into a Python script, prepare your project for Onecode, and add necessary components like inputs, outputs, and buttons.
+5. **Deploy a Web App using Onecode**: Deploy your web application and make it accessible to users.
 
 ## Course Materials
-To facilitate your learning, we have provided several files that you will use throughout the course. These files are listed below:
+To facilitate your learning, we have provided several files that you will use throughout the course. These files are available below:
 
-![](./media/Figure 1-1.png) 
+|Step|File Name|Function|
+|-|-|-|
+|**Step 1**|[GitHub Desktop](files/GitHubDesktopSetup-x64.exe)| GitHub standalone executive file|
+||[Git](files/Git-2.45.1-64-bit.exe)| Git standalone executive file|
+|**Step 2**|[Python 3.10](files/python-3.10.11-amd64.exe)| Python 3.10 executive file|
+||[VSCode](files/VSCodeUserSetup-x64-1.89.1.exe)|Visual Code Basic standalone executive file |
+|**Step 3**|[collar.csv](files/data/collar.csv)| Dataset for testing                         |
+|| [merged_data.csv](files/data/merged_data.csv)|                                             |
+||[Striplog.ipynb](files/Striplog.ipynb)| Jupyter Notebook file created during Step 2 |
+||[Striplog.py](files/Striplog.py)| Python file created from the Jupyter Notebook
+
+: {tbl-colwidths="[25,60,75]"}
 
 By the end of this course, you will have a solid foundation in coding and web app development, equipped with the skills to create and deploy your own applications. Let's get started!
- 
+
 # Step 1: Setting up GitHub
 
-While it is easier to set up GitHub at the beginning, you can do it at any time during the course.
+While it is easier to set up GitHub at the beginning, you can do it at anytime during the course.
 
 ## Setting up an account
 To get started with GitHub, follow these steps:
 
-1.	Go to [Github](https://github.com/) and **Sign up**.
+1. Go to [pythonGitHub](https://github.com/) and **Sign up**.
 
 ![](./media/Figure 2-1.png) 
 
-2.	Enter your email address (either professional or personal).
-3.	Create a password.
-4.	Choose a username.
+2. Enter your email address (either professional or personal).
+3. Create a password.
+4. Choose a username.
 
 ## Install GitHub Desktop
 
 Next, you need to install GitHub Desktop:
 
-1.	Download Github Desktop from [here](https://desktop.github.com/) or navigate to ``StartCodingToday\Step1\GitHubDesktopSetup-x64.exe``.
+1. Download GitHub Desktop from [here](https://desktop.github.com/) or navigate to ``StartCodingToday\Step1\GitHubDesktopSetup-x64.exe``.
 
-2.	At the root of your ``C:/`` drive, create a folder named **Github**. This folder will contain all your repositories corresponding to your codes. 
+2. At the root of your ``C:/`` drive, create a folder named **pythonGitHub**. This folder will contain all your repositories corresponding to your codes. 
 
-3.	Open Github Desktop and click on **Create a New Repository on your local drive…**.
+3. Open GitHub Desktop and click on **Create a New Repository on your local drive…**.
 
 ![](./media/Figure 2-2.png) 
 
-4.	Filled the form as follow and click on ”Create Repository”
+4. Fill out the form as follows and click on **Create Repository**.
 
 ![](./media/Figure 2-3.png) 
 
-This will create a folder named “Striplog” in the “Github” folder and generate two files:
--	.gitattributes which initializes GitHub.
--	README.md which contains the description of your repository.
+This will create a folder named “Striplog” in the “pythonGitHub” folder and generate two files:
+- .gitattributes which initializes GitHub.
+- README.md which contains the description of your repository.
+
 This setup will allow us to interact with your GitHub account.
 
 ![](./media/Figure 2-4.png) 
 
-5.	To publish the folder on GitHub, click on "Publish repository". Sign in to your GitHub account and follow the steps.
+5. To publish the folder on GitHub, click on **Publish repository**. Sign in to your GitHub account and follow the steps.
 
 ![](./media/Figure 2-5.png) 
-6.	Now, connect online to your GitHub account, click on your profile image, and select "Your repositories". You should see your Striplog repository.
+
+6. Now, connect online to your GitHub account, click on your profile image, and select **Your repositories**. You should see your Striplog repository.
 
 ![](./media/Figure 2-6.png) 
 
-## Install git
+## Install Git
 
 To install Git, follow these steps:
 
-1.	Go to [Git](https://git-scm.com/downloads) or navigate to ``StartCodingToday\Step1\Git-2.45.1-64-bit.exe``
+1. Go to [Git](https://git-scm.com/downloads) or navigate to ``StartCodingToday\Step1\Git-2.45.1-64-bit.exe``
 
-2.	During the setup, make sure to select the option **Unix tools from the Command Prompt**.
+2. During the setup, make sure to select the option **Unix tools from the Command Prompt**.
 
 ![](./media/Figure 2-7.png)
 
@@ -108,14 +116,13 @@ To install Git, follow these steps:
 
 Python is commonly used by geologists due to the numerous libraries available for geology-related tasks, many of which are open-source. However, the extensive use of libraries means that code often needs to be updated as libraries are updated.
 
-For this course, we will install Python 3.10 because some of the libraries we will use (see 3.4.2 Installing Libraries) require Python 3.10. 
-Note that newer versions of Python are available.
+For this course, we will install Python 3.10 because some of the libraries we will use (see 3.4.2 Installing Libraries) require Python 3.10. Note that newer versions of Python are available.
 
-1.	Go to the folder provided with this course ``StartCodingToday/Step2/python-3.10.11-amd64.exe``
-2.	Run the installer .exe.
-3.	Make sure to check the box "Add Python 3.10 to PATH" before clicking "Cuztomize Installation". This step is crucial as it makes Python accessible from the command line.
-4.	Customize the install location by creating a new folder at the root of your C:/ drive named “Python310”. The closer to the root, the easier it will be to find it.
-5.	Click on “Disable path length limit” and then “Close”.
+1. Go to the folder provided with this course ``StartCodingToday/Step2/python-3.10.11-amd64.exe``
+2. Run the installer .exe.
+3. Make sure to check the box **Add Python 3.10 to PATH** before clicking **Customize Installation**. This step is crucial as it makes Python accessible from the command line.
+4. Customize the install location by creating a new folder at the root of your C:/ drive named “Python310”. The closer to the root, the easier it will be to find it.
+5. Click on **Disable path length limit** and then **Close**.
 
 ![](./media/Figure 3-1.png)
 
@@ -123,47 +130,48 @@ Note that newer versions of Python are available.
 New versions of Python are available every year. You will eventually need to upgrade your Python as libraries are updated. However, be cautious with updates, as they can take time depending on the library. Updating Python too soon can make your scripts obsolete, requiring time to update your scripts to work properly again. This is why some expert coders prefer to use a more raw language like "R".
 :::
 
-##	Setting up Visual Studio Code
+## Setting up Visual Studio Code
 
-###	Installing Visual Studio Code
+### Installing Visual Studio Code
 
-We will install Visual Studio Code (VS Code) that is a free, open-source, powerful code editor that runs on your desktop and is available for Windows, macOS, and Linux. It comes with built-in support for several languages, including Python.
+We will install Visual Studio Code (VS Code), a free, open-source, powerful code editor that runs on your desktop and is available for Windows, macOS, and Linux. It comes with built-in support for several languages, including Python.
 
-1.	Go to [Visual Studio Code](https://code.visualstudio.com/) or to the folder provided with this course ``StartCodingToday/Step2/VSCodeUserSetup-x64-1.89.1.exe``
+1. Go to [Visual Studio Code](https://code.visualstudio.com/) or to the folder provided with this course ``StartCodingToday/Step2/VSCodeUserSetup-x64-1.89.1.exe``
 
 ![](./media/Figure 3-2.png)
 
 ::: {.callout-note}
-You might hear about Anaconda which is a distribution of Python and R programming languages designed for scientific computing and data science. It simplifies package management and deployment. It is free and was largely use across SRK but as of October 2020, Anaconda's licensing terms have changed, restricting the use of the Anaconda Individual Edition for enterprises with more than 200 employees.
+You might hear about Anaconda which is a distribution of Python and R programming languages designed for scientific computing and data science. It simplifies package management and deployment. It is free and was largely used across SRK but as of October 2020, Anaconda's licensing terms have changed, restricting the use of the Anaconda Individual Edition for enterprises with more than 200 employees.
 :::
 
-###	Overview of the Interface of Visual Studio Code
+### Overview of the Interface of Visual Studio Code
 
 Visual Studio Code offers a user-friendly interface with various functionalities accessible from the left side of the window:
+
 ![](./media/Figure 3-3.png)
 
 - **Explorer**: Access your repositories and files.
-- **Search**: Search for keywords and occurences within your repositories.
-- **Source Control**: Synchronise your repository with GitHub.
-- **Run and Debug**: execute and debug your code. 
+- **Search**: Search for keywords and occurrences within your repositories.
+- **Source Control**: Synchronize your repository with GitHub.
+- **Run and Debug**: Execute and debug your code. 
 - **Extensions**: Install various extensions to personalize your VS Code experience.
 
 You can also change the color scheme of your interface to suit your preferences.
 
-1.	In VS code, go to File>Preferences>Color Theme
-2.	Select a theme in the window that opens.
+1. In VS Code, go to **File > Preferences > Color Theme**
+2. Select a theme in the window that opens.
 
 ![](./media/Figure 3-4.png)
 
-###	Installing Extensions
+### Installing Extensions
 
-Many extensions are available for VS Code, clic on the icon   of the left of the screen, and in the search bar enter:
+Many extensions are available for VS Code. Click on the icon on the left of the screen, and in the search bar enter:
 
-1.	**Python** and **Python Extension Pack** in order for VS code to read python.
+1. **Python** and **Python Extension Pack** in order for VS Code to read Python.
 
 ![](./media/Figure 3-5.png)
 
-2.	**Jupyter**: Click on the first one and click on “Install”. It will automatically install four additional extensions as a pack. This extension will allow us to use Jupyter Notebook inside the VS Code environment.
+2. **Jupyter**: Click on the first one and click on **Install**. It will automatically install four additional extensions as a pack. This extension will allow us to use Jupyter Notebook inside the VS Code environment.
 
 ![](./media/Figure 3-6.png)
 
@@ -171,55 +179,57 @@ Many extensions are available for VS Code, clic on the icon   of the left of the
 
 ![](./media/Figure 3-7.png)
 
-4.	**GitHub repositories**: This extension allows to quickly browse, search, edit , and commit to Github directly from Visual Studio Code.
+4. **GitHub repositories**: This extension allows you to quickly browse, search, edit, and commit to GitHub directly from Visual Studio Code.
 
 ![](./media/Figure 3-8.png)
 
 ## Configure the Terminal 
 
-You can access the terminal at the top of the window and select “New terminal”, which will open at the bottom. Alternatively, use the shortcut ``Ctrl+``.
+You can access the terminal at the top of the window and select **New terminal**, which will open at the bottom. Alternatively, use the shortcut ``CTRL+` ``.
 
 ![](./media/Figure 3-9.png)
 
 Make sure to select Command Prompt, and set it as the default because note that if you close the terminal window, you will revert to Powershell and the environment will not be activated.
 To save time, follow this tip:
 
-1.	In the terminal window that opened at the bottom of the screen, click on the arrow to the right of the plus sign and select “Select Default Profile”
+1. In the terminal window that opened at the bottom of the screen, click on the arrow to the right of the plus sign and select **Select Default Profile**
 
-2.	At the top of the screen, enter *command* and select **Command Prompt**
+2. At the top of the screen, enter *command* and select **Command Prompt**
+
 ![](./media/Figure 3-10.png) 
 
 ## Setting up an Environment
 
 ### Creating a Python Environment
 
-Each time you will want to run a Python script, Visual Studio will ask you to specify the environment. The environment will include all the libraries necessary to run the script. You can update it though the terminal anytime you need to, and we will do it throughout this course. `
+Each time you want to run a Python script, Visual Studio will ask you to specify the environment. The environment will include all the libraries necessary to run the script. You can update it through the terminal anytime you need to, and we will do it throughout this course.
 
-1.	In the terminal navigate to your project directory using the command **cd**.
+1. In the terminal navigate to your project directory using the command **cd**.
 
-```{.bash}
+```python
 cd C:/Github
 ```
 2.	To create the virtual environment, enter the following line:
 
-```{.bash}
+```{.python}
 python -m venv .base
 ```
 
 or if you already have another python versions installed on your computer you should use the following:
 
-```{.bash}
+```{.python}
 py – 3.10 -m venv .base
 ```
 
 **.base** is the name of the new environment. If you need to create another one in the future, use the same methodology with a different name.
 
 3.	To activate the environment, enter: 
-```{.bash}
+```{.python}
 .\.base\Scripts\activate
 ```
 
 You will see the environment is activated as you see before you code line **(.base)**
+
 ![](./media/Figure 3-11.png)
 
 ::: {.callout-note}
@@ -252,31 +262,31 @@ In your environment, we will install all necessary libraries for the code. The m
 To install these libraries, enter the following commands in the terminal:
 
 1.	Install Pandas:
-```{.bash}
+```{.python}
 pip install pandas
 ```
 ![](./media/Figure 3-12.png)
 
 2.	Install the Jupyter library:
 
-```{.bash}
+```{.python}
 pip install jupyter
 ```
 
 3.	Install the Ipython Kernel library:
 
-```{.bash}
+```{.python}
 pip install ipykernel
 ```
 4.	Install the Matplolib library
 
-```{.bash}
+```{.python}
 pip install matplotlib
 ```
 
 Your environment is now set, you can install new library at any time using the command **pip install**.
 
-5.	Restart VS code.
+5.	Restart VS Code.
 
 ## Explorer
 
@@ -297,27 +307,39 @@ Jupyter Notebook is a useful tool for testing and visualizing each portion of yo
 ### Creating a Jupyter Notebook in VS Code
 
 6.	Right-click on the Striplog folder in the Explorer window and select New File.
+
 ![](./media/Figure 4-1.png)
+
 7.	Rename the file Striplog.ipynb. The extension is important as it will automatically define the type of file.
 8.	Click on your new file.
+
 ![](./media/Figure 4-2.png)
 
 ###	Select a Kernel
 
 9.	On the top right of the VS Code window, click on ``Python 3.10.11``.
+
 ![](./media/Figure 4-3.png)
 
 10.	Click on Select Another Kernel
+
 ![](./media/Figure 4-4.png)
 
 11.	Click on Python Environments
+
 ![](./media/Figure 4-5.png) 
 
 12.	Select .base. You should now see the Kernel used:  
 
-### Keyboard short cuts in Jupyter Notebook
+### Keyboard shortcuts in Jupyter Notebook
 
-![](./media/Figure 4-6.png)
+|Keyboard shortcut|Action|
+|-|-|
+|``CTRL+ENTER``|Run the cell|
+|``ESC + dd``|Delete the cell|
+|``ESC+A``| Add a cell above|
+|``ESC+B``|Add a cell below|
+: {tbl-colwidths="[50,75]"}
 
 ### Markdown vs. Code
 
@@ -355,12 +377,15 @@ This app aims to facilitate quick visualization of drillhole data
 ```
 ![](./media/Figure 4-8.png)
 
-15.	Select ``Run all`` or ``Ctrl+Enter``.
+15.	Select ``Run all`` or ``CTRL+ENTER``.
+
 ![](./media/Figure 4-9.png)
 
 This facilitates explanation within the code. 
 
 16.	Now let's enter a line of code: hover over the first cell and click on ``+code`` or use the keyboard shortcut b (make sure you are not editing the cell, use the **Esc** key).
+
+
 ![](./media/Figure 4-10.png)
 
 ### Import Libraries
@@ -376,8 +401,9 @@ from matplotlib.gridspec import GridSpec
 import matplotlib.lines as mlines
 ```
 
-17.	Click on the cell and press ``Ctrl+Enter`` or click at the top on ``Run all``.
+17.	Click on the cell and press ``CTRL+ENTER`` or click at the top on ``Run all``.
 If all libraries have been successfully imported, you should see a green check sign:
+
 ![](./media/Figure 4-11.png)
 
 ##	Writing the code
@@ -427,6 +453,7 @@ print(merged_data.columns.tolist())
 ```{.python}
 print(merged_data.head())
 ```
+
 ![](./media/Figure 4-14.png)
 
 22.	In the dataset, the missing values are marked by ‘-99’. For this script, we want to clean the data and replace -99 by NaN.
@@ -436,7 +463,8 @@ merged_data = merged_data.replace(-99, np.NaN)
 merged_data = merged_data.replace('-99', np.NaN)
 ```
 
-23.	``Ctrl+Enter``
+23.	``CTRL+ENTER``
+
 ![](./media/Figure 4-15.png)
 
 ### Assign Values
@@ -458,7 +486,7 @@ Note that as we are using the matplotlib library, there is a CSS colors associat
 
 ![](./media/Figure 4-16.png)
 
-24.	Let’s print the hearders of the csv tables in order to visualised the parameters that we want to visualised.
+24.	Let’s print the headers of the csv tables in order to visualised the parameters that we want to visualised.
 
 ```{.python}
 #Create a color map for the parameters
@@ -509,7 +537,7 @@ for lithology in unique_lithologies:
     print(lithology)
 ```
 
-26.	Now we can assign a the colros to each lithologies:
+26.	Now we can assign a the colors to each lithologies:
 
 ```{.python}
 #Creation of the color map based on the different lithologies
@@ -559,7 +587,7 @@ cmap_alt = {
 
 ###	Graphic representation
 
-29.	Let’s assign the value for the hole ID, this is a parameters that can be changed as we go.
+29.	Let’s assign the value for the hole ID, this is a parameter that can be changed as we go.
 ```{.python}
 holeid = 'SPD0412'  # Use the same hole ID for lithology, alteration and parameters
 ```
@@ -574,7 +602,7 @@ filtered_parameters = merged_data[merged_data['holeid'] == holeid].copy()
 31.	The goal is to plot the parameters as a curves. These parameters have usually been measured from a sample taken between two depths. So, it makes sense to actually use the midpoint between these two depths to plot the parameter value.
 
 ```{.python}
-filtered_parameters['MidDepth'] = (filtered_parameters['from'] + filtered_parameters['to']) / 
+filtered_parameters['MidDepth'] = (filtered_parameters['from'] + filtered_parameters['to']) / 2
 ```
 
 32.	Now we can work on the graphic representation using the library matplolib. First let’s set up the figure, this the grid in which we will then plot the data. 
@@ -708,7 +736,8 @@ plt.savefig('figure.png', dpi=300, bbox_inches='tight', pad_inches=0.1)
 plt.show()
 ```
 
-41.	``Ctrl+Enter``. You should be able to visualise the result:
+41.	``CTRL+ENTER``. You should be able to visualise the result:
+
 ![](./media/Figure 4-17.png)
 
 ### Error handling
@@ -733,27 +762,30 @@ If there is an error in your code, Jupyter Notebook has an integrated logging sy
 ##	Transform Jupyter Notebook in a python script
 
 1. In the Explorer window, right click on the .ipynb file and select **Import Notebook to Script**. Another windows should be appearing **Untitled-1**
+
 ![](./media/Figure 5-1.png)
 
 2. File>Save the file as Striplog.py. remember that the extension of the file is important.
+
 ![](./media/Figure 5-3.png)
 
 3. You can run this script from your terminal. Make sure you are located within your Striplog folder. Enter the following line:
 
-```{.bash}
+```{.python}
 cd Striplog
 ```
+
 ![](./media/Figure 5-2.png)
 
 4. Then run the code from the command terminal
-```{.bash}
+```{.python}
 python Striplog.py
 ```
 ##	Prepare the field for Onecode
 
 1. In your Terminal window, and install the library Onecode
 
-```{.bash}
+```{.python}
 pip install onecode[tech-expert]
 ```
 
@@ -763,7 +795,7 @@ First we need to install the OneCode skeleton to start from, this will automatic
 
 2. Then we will create the folder hierarchy for the onecode. 
 
-```{.bash}
+```{.python}
 onecode-create
 # then follow the prompts
 ? Enter the path where to create OneCode project **C:\Github\Striplog**
@@ -833,7 +865,7 @@ Remove the ``onecode.`` before the ``Logger`` function.
 
 Make sure you are working in the right folder, enter:
 
-```{.bash}
+```{.python}
 cd Striplog_Onecode
 ```
 
@@ -867,12 +899,12 @@ merged_data = csv_reader('Data', 'merged_data.csv')
 
 ::: {.callout-note}
 The first arguments 'Collar' and 'Data' are called keys, it is the name with which the dataset will be recognized by Onecode.
-The second parameter indicated the type of file, in this case a csv.
+The second parameter indicates the type of file, in this case a csv.
 :::
 
-In order to visualise the resultat, let go to the terminal and enter:
+In order to visualise the resultat, let's go to the terminal and enter:
 
-```{.bash}
+```{.python}
 onecode-start
 ```
 
@@ -889,7 +921,7 @@ In your terminal, you can see a local URL
 
 ![](./media/Figure 5-9.png)
 
-If you need to modify your code, tap ``Ctrl+c``, it will stop the viewing.
+If you need to modify your code, tap ``CTRL+C``, it will stop the viewing.
 
 ![](./media/Figure 5-10.png)
 
@@ -899,7 +931,7 @@ If you need to modify your code, tap ``Ctrl+c``, it will stop the viewing.
 
 Remember that in the code we chose the parameters that we wanted to plot. Here we will make it more interactive
 
-Search for the line in you code (``Ctrl+f``)
+Search for the line in you code (``CTRL+F``)
 
 ```{.python}
 #List the parameters to plot
@@ -949,7 +981,7 @@ plt.savefig(image_output('figure','figure.png', dpi=300, bbox_inches='tight', pa
 
 1. Let's run the code. In the terminal, enter:
 
-```{.bash}
+```{.python}
 onecode-start
 ```
 You can visualised the pre-selected data for both the parameters and the holeID.
@@ -967,6 +999,7 @@ Note that [srkCHAT](https://chat.srk.global/) or [ChatGPT](https://chatgpt.com/?
 These AI are very useful to help you understand error logs, create functions, create dataset for testing purpose.
 
 **Example using srkCHAT**:
+
 ![](./media/Figure 6-1.png)
 
 You can also connect to this repository to search for functions that have been developed within SRK CL [here](https://srkfunctionrepository.azurewebsites.net/). You also upload your own creations. 
