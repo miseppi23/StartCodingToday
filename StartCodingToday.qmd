@@ -44,8 +44,8 @@ To facilitate your learning, we have provided several files that you will use th
 ||[Git](files/Git-2.45.1-64-bit.exe)| Git standalone executive file|
 |**Step 2**|[Python 3.10](files/python-3.10.11-amd64.exe)| Python 3.10 executive file|
 ||[VSCode](files/VSCodeUserSetup-x64-1.89.1.exe)|Visual Code Basic standalone executive file |
-|**Step 3**|[collar.csv](files/data/collar.csv)| Dataset for testing                         |
-|| [merged_data.csv](files/data/merged_data.csv)|                                             |
+|**Step 3**|[collar.csv](files/collar.csv)| Dataset for testing                         |
+|| [merged_data.csv](files/merged_data.csv)|                                             |
 ||[Striplog.ipynb](files/Striplog.ipynb)| Jupyter Notebook file created during Step 2 |
 ||[Striplog.py](files/Striplog.py)| Python file created from the Jupyter Notebook
 
