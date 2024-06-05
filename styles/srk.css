@@ -15,18 +15,26 @@
     text-decoration: underline !important;
 }
 
-/* Specific link styles (excluding TOC) */
+/* Inline text links */
+.content a {
+    color: #ff8c00 !important; /* Darker orange color */
+    text-decoration: none !important;
+}
+
+.content a:hover {
+    text-decoration: underline !important;
+}
+
+/* Specific link styles for navbar and footer */
 .navbar a,
 .quarto-footer a,
-.quarto-footer .footer-nav a,
-p a { /* Added this line to make links inside the text orange */
+.quarto-footer .footer-nav a {
     color: #ff8c00 !important; /* Darker orange color */
 }
 
 .navbar a:hover,
 .quarto-footer a:hover,
-.quarto-footer .footer-nav a:hover,
-p a:hover { /* Added this line to make links inside the text underline on hover */
+.quarto-footer .footer-nav a:hover {
     text-decoration: underline !important;
 }
 
@@ -46,7 +54,7 @@ p a:hover { /* Added this line to make links inside the text underline on hover 
 
 /* Highlighted section in Table of Contents */
 #TOC .nav-link.active {
-    color: #ff8c00 !important; /* Darker orange color */
+    color: #ff8c00 !important; /* White text for contrast */
     padding: 5px; /* Optional: Add some padding */
     border-radius: 3px; /* Optional: Add rounded corners */
     border-left: 3px solid #ff8c00 !important; /* Orange line on the left side of the active section */

@@ -55,7 +55,9 @@ While it is easier to set up GitHub at the beginning, you can do it at any time 
 To get started with GitHub, follow these steps:
 
 1.	Go to [Github](https://github.com/) and **Sign up**.
+
 ![](./media/Figure 2-1.png) 
+
 2.	Enter your email address (either professional or personal).
 3.	Create a password.
 4.	Choose a username.
@@ -69,8 +71,11 @@ Next, you need to install GitHub Desktop:
 2.	At the root of your ``C:/`` drive, create a folder named **Github**. This folder will contain all your repositories corresponding to your codes. 
 
 3.	Open Github Desktop and click on **Create a New Repository on your local drive…**.
+
 ![](./media/Figure 2-2.png) 
+
 4.	Filled the form as follow and click on ”Create Repository”
+
 ![](./media/Figure 2-3.png) 
 
 This will create a folder named “Striplog” in the “Github” folder and generate two files:
@@ -81,9 +86,12 @@ This setup will allow us to interact with your GitHub account.
 ![](./media/Figure 2-4.png) 
 
 5.	To publish the folder on GitHub, click on "Publish repository". Sign in to your GitHub account and follow the steps.
+
 ![](./media/Figure 2-5.png) 
 6.	Now, connect online to your GitHub account, click on your profile image, and select "Your repositories". You should see your Striplog repository.
+
 ![](./media/Figure 2-6.png) 
+
 ## Install git
 
 To install Git, follow these steps:
@@ -91,6 +99,7 @@ To install Git, follow these steps:
 1.	Go to [Git](https://git-scm.com/downloads) or navigate to ``StartCodingToday\Step1\Git-2.45.1-64-bit.exe``
 
 2.	During the setup, make sure to select the option **Unix tools from the Command Prompt**.
+
 ![](./media/Figure 2-7.png)
 
 # Step 2: Creating a Python Environment 
