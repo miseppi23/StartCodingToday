@@ -22,7 +22,7 @@ toc-title: "Tabla de contenido"
 number-sections: true
 title-block-banner: true
 ---
-***
+
 # Introducción 
 
 ¡Bienvenido al curso *Empieza a Programar Hoy*! Este curso está diseñado para guiarte a través de los pasos esenciales para crear una aplicación web, desde la configuración de tu entorno de desarrollo hasta el despliegue de una aplicación web completamente funcional. Usaremos un ejemplo único para ilustrar cada paso, asegurándonos de que adquieras experiencia práctica y una comprensión completa de todo el proceso.
@@ -48,8 +48,8 @@ Para facilitar tu aprendizaje, hemos proporcionado varios archivos que utilizar�
 ||[VSCode](https://code.visualstudio.com/download)|Archivo ejecutable independiente de Visual Code Basic |
 |**Paso 3**|[collar.csv](files/collar.csv)| Conjunto de datos para pruebas                         |
 || [merged_data.csv](files/merged_data.csv)|                                             |
-||[Striplog.ipynb](files/Striplog.ipynb)| Archivo de Jupyter Notebook creado durante el Paso 2 |
-||[Striplog.py](files/Striplog.py)| Archivo de Python creado a partir del Jupyter Notebook|
+||[Striplog.ipynb](files/Striplog_ipynb.zip)| Archivo de Jupyter Notebook creado durante el Paso 2 |
+||[Striplog.py](files/Striplog_py.zip)| Archivo de Python creado a partir del Jupyter Notebook|
 |**Paso 4**|[Striplog_OneCode.zip](files/Striplog_Onecode.zip)| Estructura de carpetas de OneCode
 
 : {tbl-colwidths="[25,60,75]"}

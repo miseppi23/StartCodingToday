@@ -22,7 +22,7 @@ toc-title: "Table of content"
 number-sections: true
 title-block-banner: true
 ---
-***
+
 # Introduction {#sec-Introduction}
 
 Welcome to the *Start Coding Today* course! This course is designed to guide you through the essential steps of creating a web application, starting from setting up your development environment to deploying a fully functional web app. We will use a unique example to illustrate each step, ensuring that you gain practical experience and a comprehensive understanding of the entire process.
@@ -47,8 +47,8 @@ To facilitate your learning, we have provided several files that you will use th
 ||[VSCode](https://code.visualstudio.com/download)|Visual Code Basic standalone executive file |
 |**Step 3**|[collar.csv](files/collar.csv)| Dataset for testing                         |
 || [merged_data.csv](files/merged_data.csv)|                                             |
-||[Striplog.ipynb](files/Striplog.ipynb)| Jupyter Notebook file created during Step 2 |
-||[Striplog.py](files/Striplog.py)| Python file created from the Jupyter Notebook|
+||[Striplog.ipynb](files/Striplog_ipynb.zip)| Jupyter Notebook file created during Step 2 |
+||[Striplog.py](files/Striplog_py.zip)| Python file created from the Jupyter Notebook|
 |**Step 4**|[Striplog_OneCode.zip](files/Striplog_Onecode.zip)| OneCode folder tree
 
 : {tbl-colwidths="[25,60,75]"}
