@@ -1,0 +1,1018 @@
+---
+title: "**Empieza a Programar Hoy**: Crea Aplicaciones Web con Python y Onecode"
+subtitle: Iniciación al lenguaje Python, Jupyter Notebook, GitHub, VS Code y OneCode
+date: 6 June 2024
+author:
+  - name: Marion Iseppi, Consultora Senior 
+    degree: PhD
+    orcid: 0000-0002-7018-9270
+    email: miseppi@srk.cl
+    corresponding: true
+    affiliation: 
+      - name: SRK Consulting Chile SpA 
+        url: https://www.srk.com/es/contactenos/chile
+format:
+  html:
+    css: styles/srk.css
+    echo: false
+    embed-resources: false
+jupyter: python3
+toc: true
+toc-title: "Tabla de contenido"
+number-sections: true
+title-block-banner: true
+---
+***
+# Introducción {#sec-Introduction}
+
+¡Bienvenido al curso *Empieza a Programar Hoy*! Este curso está diseñado para guiarte a través de los pasos esenciales para crear una aplicación web, desde la configuración de tu entorno de desarrollo hasta el despliegue de una aplicación web completamente funcional. Usaremos un ejemplo único para ilustrar cada paso, asegurándonos de que adquieras experiencia práctica y una comprensión completa de todo el proceso.
+
+## Descripción del Curso {#sec-CourseOverview}
+A lo largo de este curso, tú:
+
+1. **Configurarás GitHub**: Aprenderás a crear una cuenta de GitHub, instalar GitHub Desktop y configurar Git para el control de versiones.
+2. **Crearás un Entorno de Python**: Instalarás Python, configurarás Visual Studio Code (VS Code) y configurarás tu terminal y entorno de Python.
+3. **Crearás un Script en Python**: Escribirás y ejecutarás código Python usando Jupyter Notebook dentro de VS Code, y aprenderás prácticas esenciales de codificación.
+4. **Crearás Aplicaciones Web con Onecode**: Transformarás tu Jupyter Notebook en un script de Python, prepararás tu proyecto para Onecode y agregarás componentes necesarios como entradas, salidas y botones.
+5. **Desplegarás una Aplicación Web usando Onecode**: Desplegarás tu aplicación web y la harás accesible para los usuarios.
+
+## Course Materials {#sec-CourseMaterials}
+To facilitate your learning, we have provided several files that you will use throughout the course. These files are available below:
+
+## Materiales del Curso {#sec-CourseMaterials}
+Para facilitar tu aprendizaje, hemos proporcionado varios archivos que utilizarás a lo largo del curso. Estos archivos están disponibles a continuación:
+
+|Paso|Nombre del Archivo|Función|
+|-|-|-|
+|**Paso 1**|[GitHub Desktop](https://desktop.github.com/)| Archivo ejecutable independiente de GitHub|
+||[Git](https://git-scm.com/downloads)| Archivo ejecutable independiente de Git|
+|**Paso 2**|[Python 3.10](files/python-3.10.11-amd64.exe)| Archivo ejecutable de Python 3.10|
+||[VSCode](https://code.visualstudio.com/download)|Archivo ejecutable independiente de Visual Code Basic |
+|**Paso 3**|[collar.csv](files/collar.csv)| Conjunto de datos para pruebas                         |
+|| [merged_data.csv](files/merged_data.csv)|                                             |
+||[Striplog.ipynb](files/Striplog.ipynb)| Archivo de Jupyter Notebook creado durante el Paso 2 |
+||[Striplog.py](files/Striplog.py)| Archivo de Python creado a partir del Jupyter Notebook|
+|**Paso 4**|[Striplog_OneCode.zip](files/Striplog_Onecode.zip)| Estructura de carpetas de OneCode
+
+: {tbl-colwidths="[25,60,75]"}
+
+Al final de este curso, tendrás una base sólida en programación y desarrollo de aplicaciones web, equipado con las habilidades para crear y desplegar tus propias aplicaciones. ¡Vamos a empezar!
+
+# Paso 1: Configuración de GitHub
+
+Aunque es más fácil configurar GitHub al principio, puedes hacerlo en cualquier momento durante el curso.
+
+## Configuración de una cuenta
+
+Para comenzar con GitHub, sigue estos pasos:
+
+1. Ve a [pythonGitHub](https://github.com/) y **Regístrate**.
+
+![](./media/Figure 2-1.png) 
+
+2. Ingresa tu dirección de correo electrónico (ya sea profesional o personal).
+3. Crea una contraseña.
+4. Elige un nombre de usuario.
+
+## Instalar GitHub Desktop
+
+A continuación, necesitas instalar GitHub Desktop:
+
+1. Descarga GitHub Desktop (ver @sec-CourseMaterials).
+
+2. En la raíz de tu unidad ``C:/``, crea una carpeta llamada **pythonGitHub**. Esta carpeta contendrá todos tus repositorios correspondientes a tus códigos.
+
+3. Abre GitHub Desktop y haz clic en **Create a New Repository on your local drive…**.
+
+![](./media/Figure 2-2.png) 
+
+4. Completa el formulario de la siguiente manera y haz clic en **Create Repository**.
+
+![](./media/Figure 2-3.png) 
+
+Esto creará una carpeta llamada “Striplog” en la carpeta “pythonGitHub” y generará dos archivos:
+- .gitattributes que inicializa GitHub.
+- README.md que contiene la descripción de tu repositorio.
+
+Esta configuración nos permitirá interactuar con tu cuenta de GitHub.
+
+![](./media/Figure 2-4.png) 
+
+5. Para publicar la carpeta en GitHub, haz clic en **Publish repository**. Inicia sesión en tu cuenta de GitHub y sigue los pasos.
+
+![](./media/Figure 2-5.png) 
+
+6. Ahora, conéctate en línea a tu cuenta de GitHub, haz clic en tu imagen de perfil y selecciona **Your repositories**. Deberías ver tu repositorio Striplog.
+
+![](./media/Figure 2-6.png)
+
+## Instalar Git
+
+Para instalar Git, sigue estos pasos:
+
+1. Descarga Git (ver @sec-CourseMaterials).
+
+2. Durante la configuración, asegúrate de seleccionar la opción **Unix tools from the Command Prompt**.
+
+![](./media/Figure 2-7.png)
+
+# Paso 2: Creación de un Entorno de Python 
+
+## Instalación de Python
+
+Python es comúnmente utilizado por geólogos debido a las numerosas bibliotecas disponibles para tareas relacionadas con la geología, muchas de las cuales son de código abierto. Sin embargo, el uso extensivo de bibliotecas significa que el código a menudo necesita ser actualizado a medida que las bibliotecas se actualizan.
+
+Para este curso, instalaremos Python 3.10 porque algunas de las bibliotecas que utilizaremos (ver 3.4.2 Instalación de Bibliotecas) requieren Python 3.10. Ten en cuenta que hay versiones más nuevas de Python disponibles.
+
+1. Descarga Python 3.10 (ver @sec-CourseMaterials).
+2. Ejecuta el instalador .exe.
+3. Asegúrate de marcar la casilla **Add Python 3.10 to PATH** antes de hacer clic en **Customize Installation**. Este paso es crucial ya que hace que Python sea accesible desde la línea de comandos.
+4. Personaliza la ubicación de la instalación creando una nueva carpeta en la raíz de tu unidad C:/ llamada “Python310”. Cuanto más cerca de la raíz, más fácil será encontrarla.
+5. Haz clic en **Disable path length limit** y luego en **Close**.
+
+![](./media/Figure 3-1.png)
+
+::: {.callout-note}
+Nuevas versiones de Python están disponibles cada año. Eventualmente necesitarás actualizar tu Python a medida que las bibliotecas se actualizan. Sin embargo, ten cuidado con las actualizaciones, ya que pueden tomar tiempo dependiendo de la biblioteca. Actualizar Python demasiado pronto puede hacer que tus scripts queden obsoletos, requiriendo tiempo para actualizar tus scripts para que funcionen correctamente nuevamente. Es por eso que algunos codificadores expertos prefieren usar un lenguaje más básico como "R".
+:::
+
+## Configuración de Visual Studio Code
+
+### Instalación de Visual Studio Code
+
+Instalaremos Visual Studio Code (VS Code), un editor de código gratuito, de código abierto y potente que se ejecuta en tu escritorio y está disponible para Windows, macOS y Linux. Viene con soporte integrado para varios lenguajes, incluido Python.
+
+1. Descarga Visual Studio Code (ver @sec-CourseMaterials).
+
+![](./media/Figure 3-2.png)
+
+::: {.callout-note}
+Es posible que escuches sobre Anaconda, que es una distribución de los lenguajes de programación Python y R diseñada para la computación científica y la ciencia de datos. Simplifica la gestión de paquetes y el despliegue. Es gratuito y fue ampliamente utilizado en SRK, pero a partir de octubre de 2020, los términos de licencia de Anaconda han cambiado, restringiendo el uso de la Edición Individual de Anaconda para empresas con más de 200 empleados.
+:::
+
+### Descripción General de la Interfaz de Visual Studio Code
+
+Visual Studio Code ofrece una interfaz fácil de usar con varias funcionalidades accesibles desde el lado izquierdo de la ventana:
+
+![](./media/Figure 3-3.png)
+
+- **Explorer**: Accede a tus repositorios y archivos.
+- **Search**: Busca palabras clave y ocurrencias dentro de tus repositorios.
+- **Source Control**: Sincroniza tu repositorio con GitHub.
+- **Run and Debug**: Ejecuta y depura tu código.
+- **Extensions**: Instala varias extensiones para personalizar tu experiencia en VS Code.
+
+También puedes cambiar el esquema de colores de tu interfaz para adaptarlo a tus preferencias.
+
+1. En VS Code, ve a **File > Preferences > Color Theme**.
+2. Selecciona un tema en la ventana que se abre.
+
+![](./media/Figure 3-4.png)
+
+### Instalación de Extensiones
+
+Muchas extensiones están disponibles para VS Code. Haz clic en el ícono en el lado izquierdo de la pantalla y en la barra de búsqueda ingresa:
+
+1. **Python** y **Python Extension Pack** para que VS Code pueda leer Python.
+
+![](./media/Figure 3-5.png)
+
+2. **Jupyter**: Haz clic en la primera opción y luego en **Install**. Esto instalará automáticamente cuatro extensiones adicionales como un paquete. Esta extensión nos permitirá usar Jupyter Notebook dentro del entorno de VS Code.
+
+![](./media/Figure 3-6.png)
+
+3. **Vscode-icons**: Esta extensión te permite ver íconos familiares para CSV, texto, Jupyter Notebook, etc., en la ventana del explorador, proporcionando una mejor vista inicial en lugar de depender solo de las extensiones de archivo.
+
+![](./media/Figure 3-7.png)
+
+4. **GitHub repositories**: Esta extensión te permite navegar, buscar, editar y hacer commits en GitHub directamente desde Visual Studio Code.
+
+![](./media/Figure 3-8.png)
+
+## Configurar el Terminal
+
+Puedes acceder al terminal en la parte superior de la ventana y seleccionar **New terminal**, que se abrirá en la parte inferior. Alternativamente, usa el atajo ``CTRL+``.
+
+![](./media/Figure 3-9.png)
+
+Asegúrate de seleccionar Command Prompt y configurarlo como predeterminado porque si cierras la ventana del terminal, volverás a Powershell y el entorno no se activará.
+Para ahorrar tiempo, sigue este consejo:
+
+1. En la ventana del terminal que se abrió en la parte inferior de la pantalla, haz clic en la flecha a la derecha del signo más y selecciona **Select Default Profile**.
+
+2. En la parte superior de la pantalla, ingresa *command* y selecciona **Command Prompt**.
+
+![](./media/Figure 3-10.png)
+
+## Configuración de un Entorno
+
+### Creación de un Entorno de Python
+
+Cada vez que quieras ejecutar un script de Python, Visual Studio te pedirá que especifiques el entorno. El entorno incluirá todas las bibliotecas necesarias para ejecutar el script. Puedes actualizarlo a través del terminal en cualquier momento que lo necesites, y lo haremos a lo largo de este curso.
+
+1. En el terminal, navega a tu directorio de proyecto usando el comando **cd**.
+
+```python
+cd C:/Github
+```
+2. Para crear el entorno virtual, ingresa la siguiente línea:
+
+```{.python}
+python -m venv .base
+```
+
+o si ya tienes otras versiones de Python instaladas en tu computadora, deberías usar lo siguiente:
+
+```{.python}
+py – 3.10 -m venv .base
+```
+
+**.base** es el nombre del nuevo entorno. Si necesitas crear otro en el futuro, usa la misma metodología con un nombre diferente.
+
+3. Para activar el entorno, ingresa:
+
+```{.python}
+.\.base\Scripts\activate
+```
+
+Verás que el entorno está activado cuando veas antes de tu línea de código **(.base)**
+
+![](./media/Figure 3-11.png)
+
+::: {.callout-note}
+Si encuentras un error 'Python cannot be found', es posible que necesites agregar Python al PATH de tu sistema manualmente. Abre el menú de Inicio y busca 'Environment Variables'. Selecciona 'Edit the system environment Variables'. En la ventana de Propiedades del Sistema, haz clic en el botón "Environment Variables...".
+:::
+
+Haz clic en "New" y agrega la ruta a tu directorio de instalación de Python `C:\Python310`.
+
+### Instalación de bibliotecas
+En tu entorno, instalaremos todas las bibliotecas necesarias para el código. Las más comunes se describen a continuación.
+
+- **Jupyter**: Parte del Proyecto Jupyter, una iniciativa de código abierto centrada en la computación interactiva. Proporciona herramientas para crear y compartir documentos que contienen código en vivo, ecuaciones, visualizaciones y texto narrativo. Soporta varios lenguajes de programación, incluidos Python, R y Julia, a través de diferentes kernels.
+
+- **IPython Kernel**: Un kernel de Jupyter para Python, que permite que los cuadernos de Jupyter ejecuten código Python. Proporciona la interfaz entre los frontends de Jupyter (como Jupyter Notebook, JupyterLab y otras herramientas de computación interactiva) y el entorno de ejecución de Python.
+
+- **Pandas**: Una biblioteca utilizada principalmente para la manipulación y el análisis de datos. Proporciona estructuras de datos y funciones que facilitan la manipulación de conjuntos de datos grandes o complejos, particularmente con sus poderosos objetos DataFrame y Series. Es ampliamente utilizada en ciencia de datos, finanzas y muchas formas de análisis donde la limpieza y preparación de datos son críticas.
+
+- **Numpy**: Fundamental para la computación científica con Python. Proporciona soporte para arreglos y matrices grandes y multidimensionales, junto con una gran colección de funciones matemáticas de alto nivel para operar en estos arreglos. Esta biblioteca se utiliza ampliamente en áreas que requieren cálculos numéricos, como simulaciones, análisis estadístico y aprendizaje automático.
+
+- **Matplotlib**: Una biblioteca de gráficos para el lenguaje de programación Python y su extensión de matemáticas numéricas NumPy. Proporciona una API orientada a objetos para incrustar gráficos en aplicaciones utilizando kits de herramientas GUI de propósito general como Tkinter, wxPython, Qt o GTK. Algunos módulos específicos dentro de Matplotlib incluyen:
+
+    - ***.pyplot**: Un módulo en Matplotlib que proporciona una interfaz similar a MATLAB. Es con estado, lo que significa que mantiene un seguimiento de la figura actual y el área de gráficos, y las funciones de gráficos se dirigen a los ejes actuales.*
+
+    - ***.patches**: Este módulo permite un control más detallado sobre las formas que se pueden dibujar, con clases como Rectangle y Circle que se pueden agregar a los gráficos para representar datos gráficamente, a menudo utilizados para anotaciones o resaltar datos específicos.*
+
+    - ***.gridspec**: Se utiliza para especificar la geometría de la cuadrícula en la que se colocará un subgráfico. Esto se puede usar para crear diseños donde los subgráficos tienen tamaños variables.*
+
+    - ***.lines**: Este módulo te permite personalizar las propiedades de las líneas en un gráfico, como el estilo de la línea, el ancho y el color. Es útil para mejorar las distinciones visuales entre múltiples conjuntos de datos en el mismo gráfico.*
+
+Para instalar estas bibliotecas, ingresa los siguientes comandos en el terminal:
+
+1. Instalar Pandas:
+```{.python}
+pip install pandas
+```
+![](./media/Figure 3-12.png)
+
+2. Instalar la biblioteca Jupyter:
+
+```{.python}
+pip install jupyter
+```
+
+3. Instalar la biblioteca Ipython Kernel:
+
+```{.python}
+pip install ipykernel
+```
+4. Instalar la biblioteca Matplotlib:
+
+```{.python}
+pip install matplotlib
+```
+
+Tu entorno ya está configurado, puedes instalar nuevas bibliotecas en cualquier momento usando el comando **pip install**.
+
+5. Reinicia VS Code.
+
+## Explorador
+
+Necesitarás acceder a tu carpeta de GitHub desde VS Code.
+Ve a la pestaña Explorer y selecciona Open Folder, navega a tu carpeta local de GitHub.
+Ahora verás tu carpeta Striplog y el .base que corresponde al entorno.
+
+![](./media/Figure 3-13.png) 
+
+# Paso 3: Creación de un Script en Python
+
+En esta parte, vamos a crear un script que permitirá, para un taladro específico, comparar rápidamente la litología y la alteración con cualquier dato numérico, incluidas las mediciones geotécnicas o los ensayos. Este script tomará como entrada un archivo CSV del collar y un archivo CSV de litología (incluyendo HoleID, profundidad desde y hasta, y litología y alteración).
+
+## Introducción a Jupyter Notebook
+
+Jupyter Notebook es una herramienta útil para probar y visualizar cada parte de tu código. Te permite hacer que tu código sea comprensible rápidamente, lo cual es útil si necesitas compartir el código o si pasará tiempo antes de que lo uses nuevamente. Para esta parte, utilizaremos Jupyter Notebook.
+
+### Creación de un Jupyter Notebook en VS Code
+
+6. Haz clic derecho en la carpeta Striplog en la ventana del Explorador y selecciona New File.
+
+![](./media/Figure 4-1.png)
+
+7. Renombra el archivo a Striplog.ipynb. La extensión es importante ya que definirá automáticamente el tipo de archivo.
+8. Haz clic en tu nuevo archivo.
+
+![](./media/Figure 4-2.png)
+
+### Seleccionar un Kernel
+
+9. En la parte superior derecha de la ventana de VS Code, haz clic en ``Python 3.10.11``.
+
+![](./media/Figure 4-3.png)
+
+10. Haz clic en Select Another Kernel.
+
+![](./media/Figure 4-4.png)
+
+11. Haz clic en Python Environments.
+
+![](./media/Figure 4-5.png) 
+
+12. Selecciona .base. Ahora deberías ver el Kernel utilizado:
+
+### Atajos de teclado en Jupyter Notebook
+
+|Atajo de teclado|Acción|
+|-|-|
+|``CTRL+ENTER``|Ejecutar la celda|
+|``ESC + dd``|Eliminar la celda|
+|``ESC+A``|Agregar una celda arriba|
+|``ESC+B``|Agregar una celda abajo|
+: {tbl-colwidths="[50,75]"}
+
+### Markdown vs. Código
+
+Markdown nos permite crear un código similar a un informe que facilitará el proceso de compartir. Algunas cosas a recordar para el formato en Jupyter Notebook:
+
+```{.python}
+# Heading Level 1
+## Heading Level 2
+### Heading Level 3
+#### Heading Level 4
+
+**Bold text**
+
+*Italic text*
+
+- Bulleted item
+- Bulleted item
+
+1. Numbered item
+2. Numbered item
+
+***
+```
+
+![](./media/Figure 4-7.png)
+
+13. Primero, asegúrate de que tu celda esté en modo **Markdown**. Deberías verlo en la esquina inferior derecha de la celda:
+
+14. Ingresa tu título y una breve descripción del proyecto. Por ejemplo:
+
+```{.python}
+## Striplog app
+
+This app aims to facilitate quick visualization of drillhole data
+```
+
+![](./media/Figure 4-8.png)
+
+15. Selecciona ``Run all`` o ``CTRL+ENTER``.
+
+![](./media/Figure 4-9.png)
+
+Esto facilita la explicación dentro del código.
+
+16. Ahora ingresemos una línea de código: pasa el cursor sobre la primera celda y haz clic en ``+code`` o usa el atajo de teclado b (asegúrate de no estar editando la celda, usa la tecla **Esc**).
+
+![](./media/Figure 4-10.png)
+
+### Importar Bibliotecas
+En cualquier código de Python, necesitarás importar las bibliotecas en tu código incluso si ya las instalaste en tu entorno.
+
+```{.python}
+#Import libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+from matplotlib.gridspec import GridSpec
+import matplotlib.lines as mlines
+```
+
+17. Haz clic en la celda y presiona ``CTRL+ENTER`` o haz clic en la parte superior en ``Run all``.
+Si todas las bibliotecas se han importado correctamente, deberías ver un signo de verificación verde:
+
+![](./media/Figure 4-11.png)
+
+## Escribir el código
+
+Comencemos con el código, puedes usar tantas celdas como necesites y ejecutarlas por separado para verificar errores.
+
+### Archivos de entrada
+
+Primero, importaremos los archivos necesarios, necesitamos el collar para el HoleID vinculado a depth_max. Para este ejercicio, será más fácil copiar los archivos de datos en la carpeta Striplog.
+Navega a ``C:/Github/Striplog`` y copia la carpeta de datos proporcionada con este curso ``StartCodingToday/Step3/data``. Esta carpeta contiene dos archivos CSV:
+
+- collar.csv
+- merge_data.csv
+
+![](./media/Figure 4-12.png)
+
+18. Crea una nueva celda en tu Jupyter Notebook.
+
+```{.python}
+# Load collar data to get max depths for each hole
+collar_data = pd.read_csv('./data/collar.csv')
+```
+::: {.callout-note}
+``./`` indica una ruta relativa a la ubicación del archivo Striplog.ipynb. ``./data`` significa que localizará el archivo collar.csv en la ruta ``C:/Github/Striplog/data``.
+:::
+
+::: {.callout-note}
+En celdas que son código y no markdown, puedes agregar fácilmente explicaciones usando #.
+:::
+
+19. Luego importaremos los datos de intervalo:
+
+```{.python}
+# Print the headers of the merged table
+merged_data=pd.read_csv('./data/merged_data.csv')
+```
+
+20. Si quieres ver los nombres de las columnas de la tabla, ingresa:
+
+```{.python}
+print(merged_data.columns.tolist())
+```
+![](./media/Figure 4-13.png)
+
+21. Si quieres ver las primeras filas:
+
+```{.python}
+print(merged_data.head())
+```
+
+![](./media/Figure 4-14.png)
+
+22. En el conjunto de datos, los valores faltantes están marcados por '-99'. Para este script, queremos limpiar los datos y reemplazar -99 por NaN.
+
+```{.python}
+merged_data = merged_data.replace(-99, np.NaN)
+merged_data = merged_data.replace('-99', np.NaN)
+```
+
+23.	``CTRL+ENTER``
+
+![](./media/Figure 4-15.png)
+
+### Asignar Valores
+
+Es muy importante nombrar cada valor para poder llamarlos correctamente después. merged_data se refiere a la tabla que importamos anteriormente.
+
+```{.python}
+#Assign values
+lithology=merged_data['Litologia']
+alteration=merged_data['Alteracion']
+
+#List the parameters to plot
+parameters=['FFEspaciamiento','RqdRQD','CUS','MO','CUFE']
+```
+
+### Creación de un Mapa de Colores
+
+Ten en cuenta que, como estamos usando la biblioteca matplotlib, hay colores CSS asociados con esta biblioteca. Así que puedes usarlos.
+
+![](./media/Figure 4-16.png)
+
+24. Imprimamos los encabezados de las tablas CSV para visualizar los parámetros que queremos visualizar.
+
+```{.python}
+#Create a color map for the parameters
+
+cmap_parameters = {
+    'PP_MINTYPE_calculadoPtXt': 'deepskyblue',
+    'AG': 'dodgerblue',
+    'AS': 'gold',
+    'Au_ppb_BEST': 'yellowgreen',
+    'ClT_kgt_BEST': 'lightcoral',
+    'CO3_pct_BEST': 'mediumseagreen',
+    'CUCN': 'darkcyan',
+    'CUFE': 'firebrick',
+    'CUS': 'indianred',
+    'CUT': 'chocolate',
+    'FE': 'saddlebrown',
+    'FET': 'peru',
+    'MO': 'mediumpurple',
+    'PP_AS_PP': 'orchid',
+    'PP_CC_2CSR': 'plum',
+    'PP_CC_PP': 'violet',
+    'PP_COV_2CSR': 'thistle',
+    'PP_COV_PP': 'lavender',
+    'PP_CPY_2CSR': 'slateblue',
+    'PP_CPY_PP': 'mediumslateblue',
+    'PY_BEST': 'royalblue',
+    'S': 'steelblue',
+    'S2': 'skyblue',
+    'FFEspaciamiento': 'deepskyblue',
+    'FFNumFracAb30Grad': 'darkorange',
+    'FFNumFracAb60Grad': 'orange',
+    'FFNumFracAb90Grad': 'goldenrod',
+    'FFrecFrac': 'khaki',
+    'FFTotalFracAbSell': 'lightgoldenrodyellow',
+    'RqdRQD': 'darkorange'
+}
+```
+
+25. Enumeremos las litologías para asignar colores:
+
+```{.python}
+# Enumarate the lithologies
+unique_lithologies = lithology.unique()
+# Print the unique lithologies
+print("Unique lithologies in the dataset:")
+for lithology in unique_lithologies:
+    print(lithology)
+```
+
+26. Ahora podemos asignar los colores a cada litología:
+
+```{.python}
+#Creation of the color map based on the different lithologies
+cmap_lith = {
+    'GRAV':'tan',
+    'AR':'darkgoldenrod',
+    'IND':'silver',
+    'SED':'gold',
+    'SBR':'chocolate',
+    'QFP1':'hotpink',
+    'COV':'cornsilk',
+    'QFP2':'coral',
+    'BRXH':'antiquewhite',
+    'FP':'mediumslateblue',
+    'ABX1':'mediumorchid',
+    'ABX2':'lightcoral',
+    'ABX3':'rosybrown',
+    'VOLC':'darkseagreen'
+}
+```
+
+27. Luego enumeremos la alteración:
+
+```{.python}
+# Enumarate the alteration
+unique_alteration = alteration.unique()
+# Print the unique lithologies
+print("Unique alteration in the dataset:")
+for alteration in unique_alteration:
+    print(alteration)
+```
+
+28. Y creemos los mapas de colores:
+
+```{.python}
+#Creation of the color map based on the different alteration
+cmap_alt = {
+    'A': 'peru',       # Arbitrary color
+    'CL': 'yellowgreen',     # Arbitrary color
+    'QS': 'lightsalmon',       # Arbitrary color
+    'SA': 'orchid',    # Arbitrary color
+    'P': 'coral',     # Arbitrary color
+    'KB': 'gold',    # Arbitrary color
+    'KF': 'pink'       # Arbitrary color
+}
+```
+
+### Representación Gráfica
+
+29. Asignemos el valor para el ID del agujero, este es un parámetro que se puede cambiar a medida que avanzamos.
+
+```{.python}
+holeid = 'SPD0412'  # Use the same hole ID for lithology, alteration and parameters
+```
+
+30. Luego filtraremos los datos del conjunto de datos al HoleID elegido.
+
+```{.python}
+filtered_litho_alt=merged_data[merged_data['holeid']==holeid].copy()
+filtered_parameters = merged_data[merged_data['holeid'] == holeid].copy()
+```
+
+31. El objetivo es graficar los parámetros como curvas. Estos parámetros generalmente se han medido a partir de una muestra tomada entre dos profundidades. Por lo tanto, tiene sentido usar el punto medio entre estas dos profundidades para graficar el valor del parámetro.
+
+```{.python}
+filtered_parameters['MidDepth'] = (filtered_parameters['from'] + filtered_parameters['to']) / 2
+```
+
+32. Ahora podemos trabajar en la representación gráfica usando la biblioteca matplotlib. Primero, configuremos la figura, esta es la cuadrícula en la que luego graficaremos los datos.
+
+::: {.callout-important}
+All the following code using plt need to be in the same cell. Here it will be separated for explanation.
+:::
+
+```{.python}
+# Setup figure and axes using GridSpec
+fig = plt.figure(figsize=(16, 8))  # Adjust the size as needed
+gs = GridSpec(1, len(parameters) + 3, figure=fig)
+```
+
+33. Podemos establecer el color de fondo en 'none', lo que significa que será transparente:
+
+```{.python}
+fig.set(facecolor='none')
+```
+
+34. Luego el título:
+
+```{.python}
+# General title for the figure
+fig.suptitle(f'Drillhole {holeid}', y= 0.9, fontsize=12, fontweight='bold', fontname='Calibri', ha='left', va='bottom')
+ ```
+
+35. El primer gráfico será para representar un registro de la litología:
+
+```{.python}
+# Plot striplog Lithology
+ax_lith = fig.add_subplot(gs[0, 0])
+ax_lith.set(facecolor = "white")
+for index, lith in filtered_litho_alt.iterrows():
+    color = cmap_lith.get(lith['Litologia'], 'white')
+    rect = patches.Rectangle((0, lith['from']), 1, lith['to'] - lith['from'], linewidth=1, edgecolor='None', facecolor=color)
+    ax_lith.add_patch(rect)
+    
+ax_lith.set_ylim([max(filtered_litho_alt['to']), min(filtered_litho_alt['from'])])
+ax_lith.set_xlim([0, 1])
+ax_lith.set_xticks([])
+ax_lith.set_ylabel('Depth (m)', fontsize=9, fontweight='bold', fontname='Calibri')
+ax_lith.set_xlabel('Lithology', fontsize=9, fontweight='bold', fontname='Calibri', labelpad=17)
+ax_lith.tick_params(axis='y', labelsize=7)  # Set tick label font size for y-axis
+``` 
+
+36. Lo mismo para la alteración:
+
+```{.python}
+# Plot striplog alteration
+ax_alt = fig.add_subplot(gs[0,1])
+ax_alt.set(facecolor="white")
+for id, alt in filtered_litho_alt.iterrows():
+    color = cmap_alt.get(alt['Alteracion'], 'white')
+    rect = patches.Rectangle((0, alt['from']), 1, alt['to'] - alt['from'], linewidth=1, edgecolor='None', facecolor=color)
+    ax_alt.add_patch(rect)
+
+ax_alt.set_ylim([max(filtered_litho_alt['to']), min(filtered_litho_alt['from'])])
+ax_alt.set_xlim([0, 1])
+ax_alt.set_xticks([])
+ax_alt.set_xlabel('Alteration', fontsize=9, fontweight='bold', fontname='Calibri', labelpad=17)
+ax_alt.tick_params(axis='y', labelsize=7)  # Set tick label font size for y-axis
+```
+
+Then plot all the chosen parameters, we need to create a loop in order to create several plot for each parameters. 
+
+37. Primero establezcamos el valor nulo
+
+```{.python}
+# Set null value
+null_value='NaN'
+```
+
+38. Y luego grafiquemos los registros
+
+```{.python}
+# Plot parameters
+for idx, element in enumerate(parameters, start=2):
+    ax = fig.add_subplot(gs[0, idx])
+    ax.set(facecolor = "white")
+    data_to_plot = filtered_parameters[element].replace(null_value, 0)
+    ax.plot(data_to_plot, filtered_parameters['MidDepth'], color=cmap_parameters[element], linewidth=2)
+    ax.set_xlabel(f"{element} (%)", fontsize=9, fontweight='bold', fontname='Calibri')
+    ax.set_ylim([max(filtered_litho_alt['to']), min(filtered_litho_alt['from'])])  # Reverse the y-axis
+    ax.tick_params(axis='both', labelsize=7)  # Set tick label font size for both axes
+    ax.grid(False)  # Turn off the grid
+    if idx > 1:
+        ax.set_yticklabels([])  # Hide y-axis labels for all but the first paramaters plot
+```
+
+### Agregar una leyenda
+
+39. Para agregar una leyenda
+
+```{.python}
+# Collect unique lithology and alteration from the data
+unique_lithologies = filtered_litho_alt['Litologia'].unique()
+unique_alterations = filtered_litho_alt['Alteracion'].unique()  # Assuming 'Alteracion' column exists
+
+# Handles for the legend
+legend_handles = []
+
+# Add Lithology entries to legend
+legend_handles.append(patches.Patch(color='none', label='Lithology'))  # Subtitle for lithology
+for label, color in cmap_lith.items():
+    if label in unique_lithologies:
+        legend_handles.append(patches.Patch(color=color, label=label))
+legend_handles.append(patches.Patch(color='none', label=''))  # For separation
+
+# Add Alteration entries to legend
+legend_handles.append(patches.Patch(color='none', label='Alteration'))  # Subtitle for alteration
+for label, color in cmap_alt.items():
+    if label in unique_alterations:
+        legend_handles.append(patches.Patch(color=color, label=label))
+legend_handles.append(patches.Patch(color='none', label=''))  # For separation
+    
+# Setting the legend outside the plot area on the right
+fig.legend(handles=legend_handles, loc='center left', bbox_to_anchor=(0.85, 0.5),
+           fontsize=9, edgecolor='black')
+```
+
+### Visualización
+
+40. Para visualizar y guardar la figura:
+
+```{.python}
+plt.subplots_adjust(wspace=0.5)  # Adjust spacing between plots
+
+# Save the figure with the background of the figure transparent, not the plots
+plt.savefig('figure.png', dpi=300, bbox_inches='tight', pad_inches=0.1)
+plt.show()
+```
+
+41. ``CTRL+ENTER``. Deberías poder visualizar el resultado:
+
+![](./media/Figure 4-17.png)
+
+### Manejo de Errores
+
+Jupyter es muy práctico para depurar un código.
+
+Intenta eliminar la línea:
+
+```{.python}
+#Set null value
+null_value='NaN'
+```
+
+Tu código subrayará inmediatamente el valor faltante:
+
+![](./media/Figure 4-19.png)
+ 
+Si hay un error en tu código, Jupyter Notebook tiene un sistema de registro integrado que te ayudará a definir de dónde proviene el error.
+
+# Paso 4: Creación de Aplicaciones Web con Onecode
+
+## Transformar Jupyter Notebook en un script de Python
+
+1. En la ventana del Explorador, haz clic derecho en el archivo .ipynb y selecciona **Import Notebook to Script**. Debería aparecer otra ventana **Untitled-1**.
+
+![](./media/Figure 5-1.png)
+
+2. File>Save the file as Striplog.py. recuerda que la extensión del archivo es importante.
+
+![](./media/Figure 5-3.png)
+
+3. Puedes ejecutar este script desde tu terminal. Asegúrate de estar ubicado dentro de tu carpeta Striplog. Ingresa la siguiente línea:
+
+```{.python}
+cd Striplog
+```
+
+![](./media/Figure 5-2.png)
+
+4. Luego ejecuta el código desde el terminal de comandos.
+
+```{.python}
+python Striplog.py
+```
+## Preparar el campo para Onecode
+
+1. En tu ventana de Terminal, instala la biblioteca Onecode.
+
+```{.python}
+pip install onecode[tech-expert]
+```
+
+La documentación de OneCode se puede encontrar aquí: [Deeplime Documentation](https://deeplime-io.github.io/onecode/0.4.0/)
+
+Primero necesitamos instalar el esqueleto de OneCode para comenzar, esto creará automáticamente carpetas y archivos para crear fácilmente una aplicación web usando streamlit.
+
+2. Luego crearemos la jerarquía de carpetas para onecode.
+
+```{.python}
+onecode-create
+# then follow the prompts
+? Enter the path where to create OneCode project **C:\Github\Striplog**
+? Enter your OneCode project name: **Striplog_Onecode**
+? Pick a name for your main flow: **Striplog_Onecode**
+⠙ Creating new OneCode project
+Initialized empty Git repository in C:/Github/Striplog/Striplog_Onecode/.git/
+✅ Created Striplog OneCode project
+```
+
+Se creó lo siguiente:
+
+![](./media/Figure 5-4.png)
+
+::: {.callout-note}
+Streamlit es una biblioteca de Python que permite convertir scripts de datos en aplicaciones web compartibles. El inconveniente es que el script necesita estar diseñado para la aplicación de streamlit desde el principio, y la configuración de visualización puede ser complicada.
+La ventaja de usar Onecode es que el código traduce directamente un script común de Python en una aplicación de streamlit utilizable. Y se supone que es compatible y compartible con cualquier tipo de configuración, lo cual no es el caso con un código de streamlit.
+:::
+
+## Agregar código a tu proyecto Onecode
+Abre el archivo striplog.py recién creado que se encuentra aquí ``C:\Github\Striplog\flows\striplog_onecode.py``.
+ 
+Primero, importaremos la herramienta correcta de Onecode. Reemplaza la primera línea en striplog.py por import onecode de la siguiente manera.
+
+```{.python}
+from onecode import (
+    Logger,
+    checkbox,
+    csv_reader,
+    dropdown,
+    file_output,
+    file_input,
+    image_output,
+    text_output,
+    csv_output,
+    slider
+)
+```
+
+Luego, copiaremos el código que exportamos de Jupyter Notebook;
+Importaremos las bibliotecas debajo de la línea import Onecode:
+
+```{.python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+from matplotlib.gridspec import GridSpec
+import matplotlib.lines as mlines
+import json
+import os
+```
+
+Luego copiaremos todo el código debajo de **def run()**.
+Luego selecciona todo el código y asegúrate de que la indentación sea correcta como se muestra a continuación:
+
+![](./media/Figure 5-6.png)
+
+::: {.callout-warning}
+Elimina el ``onecode.`` antes de la función ``Logger``.
+
+![](./media/Figure 5-71.png)
+
+:::
+
+## Modificar el código para agregar entradas, salidas, botones, etc.
+
+Asegúrate de estar trabajando en la carpeta correcta, ingresa:
+
+```{.python}
+cd Striplog_Onecode
+```
+
+También puedes copiar la ruta relativa directamente en el Explorador, haz clic derecho en la carpeta **Striplog**.
+
+![](./media/Figure 5-7.png)
+
+### Agregar archivos de entrada
+
+Modificaremos las primeras líneas de entrada y usaremos el comando **csv_reader** de Onecode.
+
+Y reemplazaremos:
+
+```{.python} 
+collar_data = pd.read_csv('./data/collar.csv')
+```
+
+por
+
+```{.python}
+collar_data = csv_reader('Collar', 'collar.csv')
+```
+
+lo mismo para el archivo de datos combinados:
+```{.python}
+merged_data=pd.read_csv('./data/merged_data.csv')
+```
+
+por
+
+```{.python}
+merged_data = csv_reader('Data', 'merged_data.csv')
+```
+
+::: {.callout-note}
+Los primeros argumentos 'Collar' y 'Data' se llaman claves, es el nombre con el que el conjunto de datos será reconocido por Onecode.
+El segundo parámetro indica el tipo de archivo, en este caso un csv.
+:::
+
+Para visualizar el resultado, vamos al terminal e ingresemos:
+
+```{.python}
+onecode-start
+```
+
+Se abrirá una ventana en tu navegador.
+
+![](./media/Figure 5-8.png)
+
+Busca los archivos, navega a ``C:/Github/Striplog/data``, podrás visualizar los conjuntos de datos.
+
+Intenta hacer clic en **Run**. No hay resultados porque no hemos marcado las variables y la salida del código.
+
+::: {.callout-tip}
+En tu terminal, puedes ver una URL local.
+
+![](./media/Figure 5-9.png)
+
+Si necesitas modificar tu código, presiona ``CTRL+C``, esto detendrá la visualización.
+
+![](./media/Figure 5-10.png)
+:::
+
+### Parámetros de Entrada
+
+Recuerda que en el código elegimos los parámetros que queríamos graficar. Aquí lo haremos más interactivo.
+
+Busca la línea en tu código (``CTRL+F``)
+
+```{.python}
+#List the parameters to plot
+parameters=['FFEspaciamiento','RqdRQD','CUS','MO','CUFE']
+```
+
+y reemplaza por:
+
+```{.python}
+#List the parameters to plot
+parameters = dropdown(
+ 'Parameters',
+ ['FFEspaciamiento', 'RqdRQD', 'CUS', 'MO', 'CUFE'],
+ options='$data$.columns',
+ multiple=True
+)
+```
+::: {.callout-note}
+::: {.callout-note}
+El primer parámetro de la función dropdown corresponde a la **clave**.
+El segundo parámetro son los parámetros preseleccionados, podrás modificarlos en la página web.
+El tercer parámetro: ``{.python}options='$data$.columns'`` hace referencia al conjunto de datos importado y nombrado **data**.
+:::
+
+### Entrada de holeID
+
+Reemplaza:
+```{.python}
+holeid = 'SPD0412'  # Use the same hole ID for both lithology and assays
+```
+
+por:
+```{.python}
+holeid = dropdown('Selected holeid', 'SPD0412', options='$data$["holeid"].unique()')
+```
+
+### Imagen de Salida
+
+Reemplaza:
+
+```{.python}
+plt.savefig('figure.png', dpi=300, bbox_inches='tight', pad_inches=0.1)
+```
+por:
+```{.python}
+plt.savefig(image_output('figure','figure.png', dpi=300, bbox_inches='tight', pad_inches=0.1))
+```
+
+## Pruebas en la Aplicación Web
+
+1. Ejecutemos el código. En el terminal, ingresa:
+
+```{.python}
+onecode-start
+```
+Puedes visualizar los datos preseleccionados tanto para los parámetros como para el holeID.
+
+![](./media/Figure 5-11.png)
+
+2. Haz clic en **Run**.
+En **data** podrás visualizar tus resultados.
+
+# Conclusión
+
+Ahora deberías tener las herramientas necesarias para crear tus propios scripts.
+
+Ten en cuenta que [srkCHAT](https://chat.srk.global/) o [ChatGPT](https://chatgpt.com/?oai-dm=1) pueden asistirte en los diferentes pasos.
+Estas IA son muy útiles para ayudarte a entender los registros de errores, crear funciones, crear conjuntos de datos para propósitos de prueba.
+
+**Ejemplo usando srkCHAT**:
+
+![](./media/Figure 6-1.png)
+
+También puedes conectarte a este repositorio para buscar funciones que se han desarrollado dentro de SRK CL [aquí](https://srkfunctionrepository.azurewebsites.net/). También puedes subir tus propias creaciones.

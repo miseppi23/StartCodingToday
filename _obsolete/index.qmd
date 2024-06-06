@@ -1,0 +1,27 @@
+---
+title: "**Home** - **Inicio**"
+subtitle: ICourse 
+date: 6 June 2024
+author:
+  - name: Marion Iseppi, Senior Consultant 
+    degree: PhD
+    orcid: 0000-0002-7018-9270
+    email: miseppi@srk.cl
+    corresponding: true
+    affiliation: 
+      - name: SRK Consulting Chile SpA 
+        url: https://www.srk.com/es/contactenos/chile
+format:
+  html:
+    css: styles/srk.css
+    echo: false
+    embed-resources: false
+jupyter: python3
+toc: true
+number-sections: true
+title-block-banner: true
+---
+
+# Welcome to My Site
+
+This is the home page of my GitHub Pages site.

@@ -1,0 +1,85 @@
+/* Dark grey title block banner */
+#title-block-header, #title-block-header .quarto-title-banner {
+    background-color: #333333 !important; /* Dark grey color */
+    color: #ffffff !important; /* White text for contrast */
+    padding: 20px; /* Optional: Add some padding */
+}
+
+#title-block-header a, #title-block-header .quarto-title-banner a,
+#title-block-header .title, #title-block-header .subtitle {
+    color: #ff8c00 !important; /* Darker orange color */
+}
+
+#title-block-header a:hover, #title-block-header .quarto-title-banner a:hover,
+#title-block-header .title:hover, #title-block-header .subtitle:hover {
+    text-decoration: underline !important;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333333 !important; /* Dark grey color */
+}
+
+.navbar a {
+    color: #ff8c00 !important; /* Darker orange color */
+}
+
+.navbar a:hover {
+    text-decoration: underline !important;
+}
+
+/* Inline text links */
+.content a {
+    color: #ff8c00 !important; /* Darker orange color */
+    text-decoration: none !important;
+}
+
+.content a:hover {
+    text-decoration: underline !important;
+}
+
+/* Specific link styles for navbar and footer */
+.navbar a,
+.quarto-footer a,
+.quarto-footer .footer-nav a {
+    color: #ff8c00 !important; /* Darker orange color */
+}
+
+.navbar a:hover,
+.quarto-footer a:hover,
+.quarto-footer .footer-nav a:hover {
+    text-decoration: underline !important;
+}
+
+/* Table of Contents */
+#TOC {
+    background-color: #ffffff; /* Keep original background */
+    padding: 10px; /* Optional: Add some padding */
+}
+
+#TOC a {
+    color: #999999; /* Light grey color for links */
+}
+
+#TOC a:hover {
+    text-decoration: underline;
+}
+
+/* Highlighted section in Table of Contents */
+#TOC .nav-link.active {
+    color: #ff8c00 !important; /* White text for contrast */
+    padding: 5px; /* Optional: Add some padding */
+    border-radius: 3px; /* Optional: Add rounded corners */
+    border-left: 3px solid #ff8c00 !important; /* Orange line on the left side of the active section */
+}
+
+/* Additional elements that might be blue */
+.btn-primary {
+    background-color: #ff8c00 !important; /* Darker orange button */
+    border-color: #ff8c00 !important; /* Darker orange border */
+}
+
+.btn-primary:hover {
+    background-color: #e67e00 !important; /* Slightly darker orange on hover */
+    border-color: #e67e00 !important; /* Slightly darker orange on hover */
+}

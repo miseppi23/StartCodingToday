@@ -1,0 +1,18 @@
+project:
+  type: website
+
+website:
+  title: "StartCodingToday"
+  navbar:
+    left:
+      - text: Span
+        href: StartCodingToday_Span.qmd
+      - text: Eng
+        href: StartCodingToday_Eng.qmd
+      
+    
+  
+format:
+  html:
+    toc: true 
+    css: styles/srk.css  # Optional: Link to a custom CSS file
