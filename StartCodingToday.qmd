@@ -48,7 +48,7 @@ To facilitate your learning, we have provided several files that you will use th
 || [merged_data.csv](files/merged_data.csv)|                                             |
 ||[Striplog.ipynb](files/Striplog.ipynb)| Jupyter Notebook file created during Step 2 |
 ||[Striplog.py](files/Striplog.py)| Python file created from the Jupyter Notebook|
-|**Step 5**|[Striplog_OneCode.zip](files/Striplog_Onecode.zip)| OneCode folder tree
+|**Step 4**|[Striplog_OneCode.zip](files/Striplog_Onecode.zip)| OneCode folder tree
 
 : {tbl-colwidths="[25,60,75]"}
 
