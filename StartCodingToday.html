@@ -149,10 +149,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">1</span>  Introduction</a>
+  <li><a href="#sec-Introduction" id="toc-sec-Introduction" class="nav-link active" data-scroll-target="#sec-Introduction"><span class="toc-section-number">1</span>  Introduction</a>
   <ul class="collapse">
-  <li><a href="#course-overview" id="toc-course-overview" class="nav-link" data-scroll-target="#course-overview"><span class="toc-section-number">1.1</span>  Course Overview</a></li>
-  <li><a href="#course-materials" id="toc-course-materials" class="nav-link" data-scroll-target="#course-materials"><span class="toc-section-number">1.2</span>  Course Materials</a></li>
+  <li><a href="#sec-CourseOverview" id="toc-sec-CourseOverview" class="nav-link" data-scroll-target="#sec-CourseOverview"><span class="toc-section-number">1.1</span>  Course Overview</a></li>
+  <li><a href="#sec-CourseMaterials" id="toc-sec-CourseMaterials" class="nav-link" data-scroll-target="#sec-CourseMaterials"><span class="toc-section-number">1.2</span>  Course Materials</a></li>
   </ul></li>
   <li><a href="#step-1-setting-up-github" id="toc-step-1-setting-up-github" class="nav-link" data-scroll-target="#step-1-setting-up-github"><span class="toc-section-number">2</span>  Step 1: Setting up GitHub</a>
   <ul class="collapse">
@@ -222,11 +222,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <hr>
-<section id="introduction" class="level1" data-number="1">
+<section id="sec-Introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <p>Welcome to the <em>Start Coding Today</em> course! This course is designed to guide you through the essential steps of creating a web application, starting from setting up your development environment to deploying a fully functional web app. We will use a unique example to illustrate each step, ensuring that you gain practical experience and a comprehensive understanding of the entire process.</p>
-<section id="course-overview" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="course-overview"><span class="header-section-number">1.1</span> Course Overview</h2>
+<section id="sec-CourseOverview" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sec-CourseOverview"><span class="header-section-number">1.1</span> Course Overview</h2>
 <p>Throughout this course, you will:</p>
 <ol type="1">
 <li><strong>Set up GitHub</strong>: Learn how to create a GitHub account, install GitHub Desktop, and configure Git for version control.</li>
@@ -236,8 +236,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>Deploy a Web App using Onecode</strong>: Deploy your web application and make it accessible to users.</li>
 </ol>
 </section>
-<section id="course-materials" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="course-materials"><span class="header-section-number">1.2</span> Course Materials</h2>
+<section id="sec-CourseMaterials" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-CourseMaterials"><span class="header-section-number">1.2</span> Course Materials</h2>
 <p>To facilitate your learning, we have provided several files that you will use throughout the course. These files are available below:</p>
 <table class="table">
 <colgroup>
@@ -255,12 +255,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td><strong>Step 1</strong></td>
-<td><a href="files/GitHubDesktopSetup-x64.exe">GitHub Desktop</a></td>
+<td><a href="https://desktop.github.com/">GitHub Desktop</a></td>
 <td>GitHub standalone executive file</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><a href="files/Git-2.45.1-64-bit.exe">Git</a></td>
+<td><a href="https://git-scm.com/downloads">Git</a></td>
 <td>Git standalone executive file</td>
 </tr>
 <tr class="odd">
@@ -270,7 +270,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td></td>
-<td><a href="files/VSCodeUserSetup-x64-1.89.1.exe">VSCode</a></td>
+<td><a href="https://code.visualstudio.com/download">VSCode</a></td>
 <td>Visual Code Basic standalone executive file</td>
 </tr>
 <tr class="odd">
@@ -292,6 +292,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td></td>
 <td><a href="files/Striplog.py">Striplog.py</a></td>
 <td>Python file created from the Jupyter Notebook</td>
+</tr>
+<tr class="odd">
+<td><strong>Step 5</strong></td>
+<td><a href="files/Striplog_Onecode.zip">Striplog_OneCode.zip</a></td>
+<td>OneCode folder tree</td>
 </tr>
 </tbody>
 </table>
@@ -318,7 +323,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 data-number="2.2" class="anchored" data-anchor-id="install-github-desktop"><span class="header-section-number">2.2</span> Install GitHub Desktop</h2>
 <p>Next, you need to install GitHub Desktop:</p>
 <ol type="1">
-<li><p>Download GitHub Desktop from <a href="https://desktop.github.com/">here</a> or navigate to <code>StartCodingToday\Step1\GitHubDesktopSetup-x64.exe</code>.</p></li>
+<li><p>Download GitHub Desktop (see <a href="#sec-CourseMaterials">Section&nbsp;1.2</a>)</p></li>
 <li><p>At the root of your <code>C:/</code> drive, create a folder named <strong>pythonGitHub</strong>. This folder will contain all your repositories corresponding to your codes.</p></li>
 <li><p>Open GitHub Desktop and click on <strong>Create a New Repository on your local drive…</strong>.</p></li>
 </ol>
@@ -343,7 +348,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 data-number="2.3" class="anchored" data-anchor-id="install-git"><span class="header-section-number">2.3</span> Install Git</h2>
 <p>To install Git, follow these steps:</p>
 <ol type="1">
-<li><p>Go to <a href="https://git-scm.com/downloads">Git</a> or navigate to <code>StartCodingToday\Step1\Git-2.45.1-64-bit.exe</code></p></li>
+<li><p>Download Git (see <a href="#sec-CourseMaterials">Section&nbsp;1.2</a>)</p></li>
 <li><p>During the setup, make sure to select the option <strong>Unix tools from the Command Prompt</strong>.</p></li>
 </ol>
 <p><img src="./media/Figure%202-7.png" class="img-fluid"></p>
@@ -356,7 +361,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Python is commonly used by geologists due to the numerous libraries available for geology-related tasks, many of which are open-source. However, the extensive use of libraries means that code often needs to be updated as libraries are updated.</p>
 <p>For this course, we will install Python 3.10 because some of the libraries we will use (see 3.4.2 Installing Libraries) require Python 3.10. Note that newer versions of Python are available.</p>
 <ol type="1">
-<li>Go to the folder provided with this course <code>StartCodingToday/Step2/python-3.10.11-amd64.exe</code></li>
+<li>Download Python 3.10 (see <a href="#sec-CourseMaterials">Section&nbsp;1.2</a>)</li>
 <li>Run the installer .exe.</li>
 <li>Make sure to check the box <strong>Add Python 3.10 to PATH</strong> before clicking <strong>Customize Installation</strong>. This step is crucial as it makes Python accessible from the command line.</li>
 <li>Customize the install location by creating a new folder at the root of your C:/ drive named “Python310”. The closer to the root, the easier it will be to find it.</li>
@@ -383,7 +388,7 @@ Note
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="installing-visual-studio-code"><span class="header-section-number">3.2.1</span> Installing Visual Studio Code</h3>
 <p>We will install Visual Studio Code (VS Code), a free, open-source, powerful code editor that runs on your desktop and is available for Windows, macOS, and Linux. It comes with built-in support for several languages, including Python.</p>
 <ol type="1">
-<li>Go to <a href="https://code.visualstudio.com/">Visual Studio Code</a> or to the folder provided with this course <code>StartCodingToday/Step2/VSCodeUserSetup-x64-1.89.1.exe</code></li>
+<li>Download Visual Studio code (see <a href="#sec-CourseMaterials">Section&nbsp;1.2</a>)</li>
 </ol>
 <p><img src="./media/Figure%203-2.png" class="img-fluid"></p>
 <div class="callout-note callout callout-style-default callout-captioned">
@@ -441,7 +446,7 @@ Note
 </section>
 <section id="configure-the-terminal" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="configure-the-terminal"><span class="header-section-number">3.3</span> Configure the Terminal</h2>
-<p>You can access the terminal at the top of the window and select <strong>New terminal</strong>, which will open at the bottom. Alternatively, use the shortcut <code>CTRL+`</code>.</p>
+<p>You can access the terminal at the top of the window and select <strong>New terminal</strong>, which will open at the bottom. Alternatively, use the shortcut <code>CTRL+</code>.</p>
 <p><img src="./media/Figure%203-9.png" class="img-fluid"></p>
 <p>Make sure to select Command Prompt, and set it as the default because note that if you close the terminal window, you will revert to Powershell and the environment will not be activated. To save time, follow this tip:</p>
 <ol type="1">
