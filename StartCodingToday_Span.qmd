@@ -23,11 +23,11 @@ number-sections: true
 title-block-banner: true
 ---
 ***
-# Introducción {#sec-Introduction}
+# Introducción 
 
 ¡Bienvenido al curso *Empieza a Programar Hoy*! Este curso está diseñado para guiarte a través de los pasos esenciales para crear una aplicación web, desde la configuración de tu entorno de desarrollo hasta el despliegue de una aplicación web completamente funcional. Usaremos un ejemplo único para ilustrar cada paso, asegurándonos de que adquieras experiencia práctica y una comprensión completa de todo el proceso.
 
-## Descripción del Curso {#sec-CourseOverview}
+## Descripción del Curso 
 A lo largo de este curso, tú:
 
 1. **Configurarás GitHub**: Aprenderás a crear una cuenta de GitHub, instalar GitHub Desktop y configurar Git para el control de versiones.
@@ -36,10 +36,8 @@ A lo largo de este curso, tú:
 4. **Crearás Aplicaciones Web con Onecode**: Transformarás tu Jupyter Notebook en un script de Python, prepararás tu proyecto para Onecode y agregarás componentes necesarios como entradas, salidas y botones.
 5. **Desplegarás una Aplicación Web usando Onecode**: Desplegarás tu aplicación web y la harás accesible para los usuarios.
 
-## Course Materials {#sec-CourseMaterials}
-To facilitate your learning, we have provided several files that you will use throughout the course. These files are available below:
 
-## Materiales del Curso {#sec-CourseMaterials}
+## Materiales del Curso {#sec-MaterialCurso}
 Para facilitar tu aprendizaje, hemos proporcionado varios archivos que utilizarás a lo largo del curso. Estos archivos están disponibles a continuación:
 
 |Paso|Nombre del Archivo|Función|
@@ -78,7 +76,7 @@ Para comenzar con GitHub, sigue estos pasos:
 
 A continuación, necesitas instalar GitHub Desktop:
 
-1. Descarga GitHub Desktop (ver @sec-CourseMaterials).
+1. Descarga GitHub Desktop (ver @sec-MaterialCurso).
 
 2. En la raíz de tu unidad ``C:/``, crea una carpeta llamada **pythonGitHub**. Esta carpeta contendrá todos tus repositorios correspondientes a tus códigos.
 
@@ -110,7 +108,7 @@ Esta configuración nos permitirá interactuar con tu cuenta de GitHub.
 
 Para instalar Git, sigue estos pasos:
 
-1. Descarga Git (ver @sec-CourseMaterials).
+1. Descarga Git (ver @sec-MaterialCurso).
 
 2. Durante la configuración, asegúrate de seleccionar la opción **Unix tools from the Command Prompt**.
 
@@ -124,7 +122,7 @@ Python es comúnmente utilizado por geólogos debido a las numerosas bibliotecas
 
 Para este curso, instalaremos Python 3.10 porque algunas de las bibliotecas que utilizaremos (ver 3.4.2 Instalación de Bibliotecas) requieren Python 3.10. Ten en cuenta que hay versiones más nuevas de Python disponibles.
 
-1. Descarga Python 3.10 (ver @sec-CourseMaterials).
+1. Descarga Python 3.10 (ver @sec-MaterialCurso).
 2. Ejecuta el instalador .exe.
 3. Asegúrate de marcar la casilla **Add Python 3.10 to PATH** antes de hacer clic en **Customize Installation**. Este paso es crucial ya que hace que Python sea accesible desde la línea de comandos.
 4. Personaliza la ubicación de la instalación creando una nueva carpeta en la raíz de tu unidad C:/ llamada “Python310”. Cuanto más cerca de la raíz, más fácil será encontrarla.
@@ -142,7 +140,7 @@ Nuevas versiones de Python están disponibles cada año. Eventualmente necesitar
 
 Instalaremos Visual Studio Code (VS Code), un editor de código gratuito, de código abierto y potente que se ejecuta en tu escritorio y está disponible para Windows, macOS y Linux. Viene con soporte integrado para varios lenguajes, incluido Python.
 
-1. Descarga Visual Studio Code (ver @sec-CourseMaterials).
+1. Descarga Visual Studio Code (ver @sec-MaterialCurso).
 
 ![](./media/Figure 3-2.png)
 
