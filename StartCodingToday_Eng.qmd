@@ -55,7 +55,7 @@ To facilitate your learning, we have provided several files that you will use th
 
 By the end of this course, you will have a solid foundation in coding and web app development, equipped with the skills to create and deploy your own applications. Let's get started!
 
-# Step 1: Setting up GitHub
+# **Step 1**: Setting up GitHub
 
 While it is easier to set up GitHub at the beginning, you can do it at anytime during the course.
 
@@ -63,7 +63,7 @@ While it is easier to set up GitHub at the beginning, you can do it at anytime d
 
 To get started with GitHub, follow these steps:
 
-1. Go to [pythonGitHub](https://github.com/) and **Sign up**.
+1. Go to [GitHub](https://github.com/) and **Sign up**.
 
 ![](./media/Figure 2-1.png) 
 
@@ -113,7 +113,7 @@ To install Git, follow these steps:
 
 ![](./media/Figure 2-7.png)
 
-# Step 2: Creating a Python Environment 
+# **Step 2**: Creating a Python Environment 
 
 ## Installing Python
 
@@ -299,7 +299,7 @@ You will now see your folder Striplog and the .base that corresponds to the envi
 
 ![](./media/Figure 3-13.png) 
 
-# Step 3: Creating a Python Script
+# **Step 3**: Creating a Python Script
 
 In this part, we are going to create a script that will allow for a specific drillhole to quickly compare lithology and alteration to any numerical data, including geotechnical measurements or assays. This script will take as input a CSV file of the collar and a CSV file of lithology (including HoleID, depth from and to, and lithology and alteration)
 
@@ -759,7 +759,7 @@ You code will immediately underline the missing value:
  
 If there is an error in your code, Jupyter Notebook has an integrated logging system that will help you define where the error is coming from.
 
-#	Step 4: Creating Web Apps with Onecode
+#	**Step 4**: Creating Web Apps with Onecode
 
 ##	Transform Jupyter Notebook in a python script
 

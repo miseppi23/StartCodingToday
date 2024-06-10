@@ -56,7 +56,7 @@ Para facilitar tu aprendizaje, hemos proporcionado varios archivos que utilizar�
 
 Al final de este curso, tendrás una base sólida en programación y desarrollo de aplicaciones web, equipado con las habilidades para crear y desplegar tus propias aplicaciones. ¡Vamos a empezar!
 
-# Paso 1: Configuración de GitHub
+# **Paso 1**: Configuración de GitHub
 
 Aunque es más fácil configurar GitHub al principio, puedes hacerlo en cualquier momento durante el curso.
 
@@ -64,7 +64,7 @@ Aunque es más fácil configurar GitHub al principio, puedes hacerlo en cualquie
 
 Para comenzar con GitHub, sigue estos pasos:
 
-1. Ve a [pythonGitHub](https://github.com/) y **Regístrate**.
+1. Ve a [GitHub](https://github.com/) y **Regístrate**.
 
 ![](./media/Figure 2-1.png) 
 
@@ -114,7 +114,7 @@ Para instalar Git, sigue estos pasos:
 
 ![](./media/Figure 2-7.png)
 
-# Paso 2: Creación de un Entorno de Python 
+# **Paso 2**: Creación de un Entorno de Python 
 
 ## Instalación de Python
 
@@ -301,7 +301,7 @@ Ahora verás tu carpeta Striplog y el .base que corresponde al entorno.
 
 ![](./media/Figure 3-13.png) 
 
-# Paso 3: Creación de un Script en Python
+# **Paso 3**: Creación de un Script en Python
 
 En esta parte, vamos a crear un script que permitirá, para un taladro específico, comparar rápidamente la litología y la alteración con cualquier dato numérico, incluidas las mediciones geotécnicas o los ensayos. Este script tomará como entrada un archivo CSV del collar y un archivo CSV de litología (incluyendo HoleID, profundidad desde y hasta, y litología y alteración).
 
@@ -613,7 +613,7 @@ filtered_parameters['MidDepth'] = (filtered_parameters['from'] + filtered_parame
 32. Ahora podemos trabajar en la representación gráfica usando la biblioteca matplotlib. Primero, configuremos la figura, esta es la cuadrícula en la que luego graficaremos los datos.
 
 ::: {.callout-important}
-All the following code using plt need to be in the same cell. Here it will be separated for explanation.
+Todo el código siguiente que usa plt necesita estar en la misma celda. Aquí estará separado para su explicación.
 :::
 
 ```{.python}
@@ -762,7 +762,7 @@ Tu código subrayará inmediatamente el valor faltante:
  
 Si hay un error en tu código, Jupyter Notebook tiene un sistema de registro integrado que te ayudará a definir de dónde proviene el error.
 
-# Paso 4: Creación de Aplicaciones Web con Onecode
+# **Paso 4**: Creación de Aplicaciones Web con Onecode
 
 ## Transformar Jupyter Notebook en un script de Python
 
