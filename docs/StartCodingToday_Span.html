@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.5.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Marion Iseppi, Consultora Senior">
 <meta name="dcterms.date" content="2024-06-06">
 
-<title>StartCodingToday - Empieza a Programar Hoy: Crea Aplicaciones Web con Python y Onecode</title>
+<title>&lt;img src="media/SRKLogo.svg" alt="SRK Consulting" style="height: 30px;"&gt; – Empieza a Programar Hoy: Crea Aplicaciones Web con Python y Onecode</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,11 +19,12 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -34,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -48,43 +49,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -110,7 +81,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -119,10 +96,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
+<style type="text/css">
+.footer {
+  font-size: 0.85em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #7F7F7F; /* Dark grey background */
+  color: #FFFFFF; /* White text */
+}
+</style>
 
 
 <link rel="stylesheet" href="styles/srk.css">
@@ -131,30 +122,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">StartCodingToday</span>
+    <span class="navbar-title"><img src="media/SRKLogo.svg" alt="SRK Consulting" style="height: 30px;"></span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./StartCodingToday_Span.html" aria-current="page">
- <span class="menu-text">Span</span></a>
+    <a class="nav-link active" href="./StartCodingToday_Span.html" aria-current="page"> 
+<span class="menu-text">Span</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./StartCodingToday_Eng.html">
- <span class="menu-text">Eng</span></a>
+    <a class="nav-link" href="./StartCodingToday_Eng.html"> 
+<span class="menu-text">Eng</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -172,16 +165,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div class="quarto-title-meta-heading">Affiliation</div>
     
       <div class="quarto-title-meta-contents">
-      Marion Iseppi, Consultora Senior <a href="https://orcid.org/0000-0002-7018-9270" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+      <p class="author">Marion Iseppi, Consultora Senior <a href="mailto:miseppi@srk.cl" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0002-7018-9270" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
     </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
           <p class="affiliation">
               <a href="https://www.srk.com/es/contactenos/chile">
               SRK Consulting Chile SpA
               </a>
             </p>
         </div>
-      </div>
+    </div>
 
   <div class="quarto-title-meta">
 
@@ -205,75 +198,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Tabla de contenido</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="toc-section-number">1</span>  Introducción</a>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">1</span> Introducción</a>
   <ul class="collapse">
-  <li><a href="#descripción-del-curso" id="toc-descripción-del-curso" class="nav-link" data-scroll-target="#descripción-del-curso"><span class="toc-section-number">1.1</span>  Descripción del Curso</a></li>
-  <li><a href="#sec-MaterialCurso" id="toc-sec-MaterialCurso" class="nav-link" data-scroll-target="#sec-MaterialCurso"><span class="toc-section-number">1.2</span>  Materiales del Curso</a></li>
+  <li><a href="#descripción-del-curso" id="toc-descripción-del-curso" class="nav-link" data-scroll-target="#descripción-del-curso"><span class="header-section-number">1.1</span> Descripción del Curso</a></li>
+  <li><a href="#sec-MaterialCurso" id="toc-sec-MaterialCurso" class="nav-link" data-scroll-target="#sec-MaterialCurso"><span class="header-section-number">1.2</span> Materiales del Curso</a></li>
   </ul></li>
-  <li><a href="#paso-1-configuración-de-github" id="toc-paso-1-configuración-de-github" class="nav-link" data-scroll-target="#paso-1-configuración-de-github"><span class="toc-section-number">2</span>  <strong>Paso 1</strong>: Configuración de GitHub</a>
+  <li><a href="#paso-1-configuración-de-github" id="toc-paso-1-configuración-de-github" class="nav-link" data-scroll-target="#paso-1-configuración-de-github"><span class="header-section-number">2</span> <strong>Paso 1</strong>: Configuración de GitHub</a>
   <ul class="collapse">
-  <li><a href="#configuración-de-una-cuenta" id="toc-configuración-de-una-cuenta" class="nav-link" data-scroll-target="#configuración-de-una-cuenta"><span class="toc-section-number">2.1</span>  Configuración de una cuenta</a></li>
-  <li><a href="#instalar-github-desktop" id="toc-instalar-github-desktop" class="nav-link" data-scroll-target="#instalar-github-desktop"><span class="toc-section-number">2.2</span>  Instalar GitHub Desktop</a></li>
-  <li><a href="#instalar-git" id="toc-instalar-git" class="nav-link" data-scroll-target="#instalar-git"><span class="toc-section-number">2.3</span>  Instalar Git</a></li>
+  <li><a href="#configuración-de-una-cuenta" id="toc-configuración-de-una-cuenta" class="nav-link" data-scroll-target="#configuración-de-una-cuenta"><span class="header-section-number">2.1</span> Configuración de una cuenta</a></li>
+  <li><a href="#instalar-github-desktop" id="toc-instalar-github-desktop" class="nav-link" data-scroll-target="#instalar-github-desktop"><span class="header-section-number">2.2</span> Instalar GitHub Desktop</a></li>
+  <li><a href="#instalar-git" id="toc-instalar-git" class="nav-link" data-scroll-target="#instalar-git"><span class="header-section-number">2.3</span> Instalar Git</a></li>
   </ul></li>
-  <li><a href="#paso-2-creación-de-un-entorno-de-python" id="toc-paso-2-creación-de-un-entorno-de-python" class="nav-link" data-scroll-target="#paso-2-creación-de-un-entorno-de-python"><span class="toc-section-number">3</span>  <strong>Paso 2</strong>: Creación de un Entorno de Python</a>
+  <li><a href="#paso-2-creación-de-un-entorno-de-python" id="toc-paso-2-creación-de-un-entorno-de-python" class="nav-link" data-scroll-target="#paso-2-creación-de-un-entorno-de-python"><span class="header-section-number">3</span> <strong>Paso 2</strong>: Creación de un Entorno de Python</a>
   <ul class="collapse">
-  <li><a href="#instalación-de-python" id="toc-instalación-de-python" class="nav-link" data-scroll-target="#instalación-de-python"><span class="toc-section-number">3.1</span>  Instalación de Python</a></li>
-  <li><a href="#configuración-de-visual-studio-code" id="toc-configuración-de-visual-studio-code" class="nav-link" data-scroll-target="#configuración-de-visual-studio-code"><span class="toc-section-number">3.2</span>  Configuración de Visual Studio Code</a>
+  <li><a href="#instalación-de-python" id="toc-instalación-de-python" class="nav-link" data-scroll-target="#instalación-de-python"><span class="header-section-number">3.1</span> Instalación de Python</a></li>
+  <li><a href="#configuración-de-visual-studio-code" id="toc-configuración-de-visual-studio-code" class="nav-link" data-scroll-target="#configuración-de-visual-studio-code"><span class="header-section-number">3.2</span> Configuración de Visual Studio Code</a>
   <ul class="collapse">
-  <li><a href="#instalación-de-visual-studio-code" id="toc-instalación-de-visual-studio-code" class="nav-link" data-scroll-target="#instalación-de-visual-studio-code"><span class="toc-section-number">3.2.1</span>  Instalación de Visual Studio Code</a></li>
-  <li><a href="#descripción-general-de-la-interfaz-de-visual-studio-code" id="toc-descripción-general-de-la-interfaz-de-visual-studio-code" class="nav-link" data-scroll-target="#descripción-general-de-la-interfaz-de-visual-studio-code"><span class="toc-section-number">3.2.2</span>  Descripción General de la Interfaz de Visual Studio Code</a></li>
-  <li><a href="#instalación-de-extensiones" id="toc-instalación-de-extensiones" class="nav-link" data-scroll-target="#instalación-de-extensiones"><span class="toc-section-number">3.2.3</span>  Instalación de Extensiones</a></li>
+  <li><a href="#instalación-de-visual-studio-code" id="toc-instalación-de-visual-studio-code" class="nav-link" data-scroll-target="#instalación-de-visual-studio-code"><span class="header-section-number">3.2.1</span> Instalación de Visual Studio Code</a></li>
+  <li><a href="#descripción-general-de-la-interfaz-de-visual-studio-code" id="toc-descripción-general-de-la-interfaz-de-visual-studio-code" class="nav-link" data-scroll-target="#descripción-general-de-la-interfaz-de-visual-studio-code"><span class="header-section-number">3.2.2</span> Descripción General de la Interfaz de Visual Studio Code</a></li>
+  <li><a href="#instalación-de-extensiones" id="toc-instalación-de-extensiones" class="nav-link" data-scroll-target="#instalación-de-extensiones"><span class="header-section-number">3.2.3</span> Instalación de Extensiones</a></li>
   </ul></li>
-  <li><a href="#configurar-el-terminal" id="toc-configurar-el-terminal" class="nav-link" data-scroll-target="#configurar-el-terminal"><span class="toc-section-number">3.3</span>  Configurar el Terminal</a></li>
-  <li><a href="#configuración-de-un-entorno" id="toc-configuración-de-un-entorno" class="nav-link" data-scroll-target="#configuración-de-un-entorno"><span class="toc-section-number">3.4</span>  Configuración de un Entorno</a>
+  <li><a href="#configurar-el-terminal" id="toc-configurar-el-terminal" class="nav-link" data-scroll-target="#configurar-el-terminal"><span class="header-section-number">3.3</span> Configurar el Terminal</a></li>
+  <li><a href="#configuración-de-un-entorno" id="toc-configuración-de-un-entorno" class="nav-link" data-scroll-target="#configuración-de-un-entorno"><span class="header-section-number">3.4</span> Configuración de un Entorno</a>
   <ul class="collapse">
-  <li><a href="#creación-de-un-entorno-de-python" id="toc-creación-de-un-entorno-de-python" class="nav-link" data-scroll-target="#creación-de-un-entorno-de-python"><span class="toc-section-number">3.4.1</span>  Creación de un Entorno de Python</a></li>
-  <li><a href="#instalación-de-bibliotecas" id="toc-instalación-de-bibliotecas" class="nav-link" data-scroll-target="#instalación-de-bibliotecas"><span class="toc-section-number">3.4.2</span>  Instalación de bibliotecas</a></li>
+  <li><a href="#creación-de-un-entorno-de-python" id="toc-creación-de-un-entorno-de-python" class="nav-link" data-scroll-target="#creación-de-un-entorno-de-python"><span class="header-section-number">3.4.1</span> Creación de un Entorno de Python</a></li>
+  <li><a href="#instalación-de-bibliotecas" id="toc-instalación-de-bibliotecas" class="nav-link" data-scroll-target="#instalación-de-bibliotecas"><span class="header-section-number">3.4.2</span> Instalación de bibliotecas</a></li>
   </ul></li>
-  <li><a href="#explorador" id="toc-explorador" class="nav-link" data-scroll-target="#explorador"><span class="toc-section-number">3.5</span>  Explorador</a></li>
+  <li><a href="#explorador" id="toc-explorador" class="nav-link" data-scroll-target="#explorador"><span class="header-section-number">3.5</span> Explorador</a></li>
   </ul></li>
-  <li><a href="#paso-3-creación-de-un-script-en-python" id="toc-paso-3-creación-de-un-script-en-python" class="nav-link" data-scroll-target="#paso-3-creación-de-un-script-en-python"><span class="toc-section-number">4</span>  <strong>Paso 3</strong>: Creación de un Script en Python</a>
+  <li><a href="#paso-3-creación-de-un-script-en-python" id="toc-paso-3-creación-de-un-script-en-python" class="nav-link" data-scroll-target="#paso-3-creación-de-un-script-en-python"><span class="header-section-number">4</span> <strong>Paso 3</strong>: Creación de un Script en Python</a>
   <ul class="collapse">
-  <li><a href="#introducción-a-jupyter-notebook" id="toc-introducción-a-jupyter-notebook" class="nav-link" data-scroll-target="#introducción-a-jupyter-notebook"><span class="toc-section-number">4.1</span>  Introducción a Jupyter Notebook</a>
+  <li><a href="#introducción-a-jupyter-notebook" id="toc-introducción-a-jupyter-notebook" class="nav-link" data-scroll-target="#introducción-a-jupyter-notebook"><span class="header-section-number">4.1</span> Introducción a Jupyter Notebook</a>
   <ul class="collapse">
-  <li><a href="#creación-de-un-jupyter-notebook-en-vs-code" id="toc-creación-de-un-jupyter-notebook-en-vs-code" class="nav-link" data-scroll-target="#creación-de-un-jupyter-notebook-en-vs-code"><span class="toc-section-number">4.1.1</span>  Creación de un Jupyter Notebook en VS Code</a></li>
-  <li><a href="#seleccionar-un-kernel" id="toc-seleccionar-un-kernel" class="nav-link" data-scroll-target="#seleccionar-un-kernel"><span class="toc-section-number">4.1.2</span>  Seleccionar un Kernel</a></li>
-  <li><a href="#atajos-de-teclado-en-jupyter-notebook" id="toc-atajos-de-teclado-en-jupyter-notebook" class="nav-link" data-scroll-target="#atajos-de-teclado-en-jupyter-notebook"><span class="toc-section-number">4.1.3</span>  Atajos de teclado en Jupyter Notebook</a></li>
-  <li><a href="#markdown-vs.-código" id="toc-markdown-vs.-código" class="nav-link" data-scroll-target="#markdown-vs.-código"><span class="toc-section-number">4.1.4</span>  Markdown vs.&nbsp;Código</a></li>
-  <li><a href="#importar-bibliotecas" id="toc-importar-bibliotecas" class="nav-link" data-scroll-target="#importar-bibliotecas"><span class="toc-section-number">4.1.5</span>  Importar Bibliotecas</a></li>
+  <li><a href="#creación-de-un-jupyter-notebook-en-vs-code" id="toc-creación-de-un-jupyter-notebook-en-vs-code" class="nav-link" data-scroll-target="#creación-de-un-jupyter-notebook-en-vs-code"><span class="header-section-number">4.1.1</span> Creación de un Jupyter Notebook en VS Code</a></li>
+  <li><a href="#seleccionar-un-kernel" id="toc-seleccionar-un-kernel" class="nav-link" data-scroll-target="#seleccionar-un-kernel"><span class="header-section-number">4.1.2</span> Seleccionar un Kernel</a></li>
+  <li><a href="#atajos-de-teclado-en-jupyter-notebook" id="toc-atajos-de-teclado-en-jupyter-notebook" class="nav-link" data-scroll-target="#atajos-de-teclado-en-jupyter-notebook"><span class="header-section-number">4.1.3</span> Atajos de teclado en Jupyter Notebook</a></li>
+  <li><a href="#markdown-vs.-código" id="toc-markdown-vs.-código" class="nav-link" data-scroll-target="#markdown-vs.-código"><span class="header-section-number">4.1.4</span> Markdown vs.&nbsp;Código</a></li>
+  <li><a href="#importar-bibliotecas" id="toc-importar-bibliotecas" class="nav-link" data-scroll-target="#importar-bibliotecas"><span class="header-section-number">4.1.5</span> Importar Bibliotecas</a></li>
   </ul></li>
-  <li><a href="#escribir-el-código" id="toc-escribir-el-código" class="nav-link" data-scroll-target="#escribir-el-código"><span class="toc-section-number">4.2</span>  Escribir el código</a>
+  <li><a href="#escribir-el-código" id="toc-escribir-el-código" class="nav-link" data-scroll-target="#escribir-el-código"><span class="header-section-number">4.2</span> Escribir el código</a>
   <ul class="collapse">
-  <li><a href="#archivos-de-entrada" id="toc-archivos-de-entrada" class="nav-link" data-scroll-target="#archivos-de-entrada"><span class="toc-section-number">4.2.1</span>  Archivos de entrada</a></li>
-  <li><a href="#asignar-valores" id="toc-asignar-valores" class="nav-link" data-scroll-target="#asignar-valores"><span class="toc-section-number">4.2.2</span>  Asignar Valores</a></li>
-  <li><a href="#creación-de-un-mapa-de-colores" id="toc-creación-de-un-mapa-de-colores" class="nav-link" data-scroll-target="#creación-de-un-mapa-de-colores"><span class="toc-section-number">4.2.3</span>  Creación de un Mapa de Colores</a></li>
-  <li><a href="#representación-gráfica" id="toc-representación-gráfica" class="nav-link" data-scroll-target="#representación-gráfica"><span class="toc-section-number">4.2.4</span>  Representación Gráfica</a></li>
-  <li><a href="#agregar-una-leyenda" id="toc-agregar-una-leyenda" class="nav-link" data-scroll-target="#agregar-una-leyenda"><span class="toc-section-number">4.2.5</span>  Agregar una leyenda</a></li>
-  <li><a href="#visualización" id="toc-visualización" class="nav-link" data-scroll-target="#visualización"><span class="toc-section-number">4.2.6</span>  Visualización</a></li>
-  <li><a href="#manejo-de-errores" id="toc-manejo-de-errores" class="nav-link" data-scroll-target="#manejo-de-errores"><span class="toc-section-number">4.2.7</span>  Manejo de Errores</a></li>
+  <li><a href="#archivos-de-entrada" id="toc-archivos-de-entrada" class="nav-link" data-scroll-target="#archivos-de-entrada"><span class="header-section-number">4.2.1</span> Archivos de entrada</a></li>
+  <li><a href="#asignar-valores" id="toc-asignar-valores" class="nav-link" data-scroll-target="#asignar-valores"><span class="header-section-number">4.2.2</span> Asignar Valores</a></li>
+  <li><a href="#creación-de-un-mapa-de-colores" id="toc-creación-de-un-mapa-de-colores" class="nav-link" data-scroll-target="#creación-de-un-mapa-de-colores"><span class="header-section-number">4.2.3</span> Creación de un Mapa de Colores</a></li>
+  <li><a href="#representación-gráfica" id="toc-representación-gráfica" class="nav-link" data-scroll-target="#representación-gráfica"><span class="header-section-number">4.2.4</span> Representación Gráfica</a></li>
+  <li><a href="#agregar-una-leyenda" id="toc-agregar-una-leyenda" class="nav-link" data-scroll-target="#agregar-una-leyenda"><span class="header-section-number">4.2.5</span> Agregar una leyenda</a></li>
+  <li><a href="#visualización" id="toc-visualización" class="nav-link" data-scroll-target="#visualización"><span class="header-section-number">4.2.6</span> Visualización</a></li>
+  <li><a href="#manejo-de-errores" id="toc-manejo-de-errores" class="nav-link" data-scroll-target="#manejo-de-errores"><span class="header-section-number">4.2.7</span> Manejo de Errores</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#paso-4-creación-de-aplicaciones-web-con-onecode" id="toc-paso-4-creación-de-aplicaciones-web-con-onecode" class="nav-link" data-scroll-target="#paso-4-creación-de-aplicaciones-web-con-onecode"><span class="toc-section-number">5</span>  <strong>Paso 4</strong>: Creación de Aplicaciones Web con Onecode</a>
+  <li><a href="#paso-4-creación-de-aplicaciones-web-con-onecode" id="toc-paso-4-creación-de-aplicaciones-web-con-onecode" class="nav-link" data-scroll-target="#paso-4-creación-de-aplicaciones-web-con-onecode"><span class="header-section-number">5</span> <strong>Paso 4</strong>: Creación de Aplicaciones Web con Onecode</a>
   <ul class="collapse">
-  <li><a href="#transformar-jupyter-notebook-en-un-script-de-python" id="toc-transformar-jupyter-notebook-en-un-script-de-python" class="nav-link" data-scroll-target="#transformar-jupyter-notebook-en-un-script-de-python"><span class="toc-section-number">5.1</span>  Transformar Jupyter Notebook en un script de Python</a></li>
-  <li><a href="#preparar-el-campo-para-onecode" id="toc-preparar-el-campo-para-onecode" class="nav-link" data-scroll-target="#preparar-el-campo-para-onecode"><span class="toc-section-number">5.2</span>  Preparar el campo para Onecode</a></li>
-  <li><a href="#agregar-código-a-tu-proyecto-onecode" id="toc-agregar-código-a-tu-proyecto-onecode" class="nav-link" data-scroll-target="#agregar-código-a-tu-proyecto-onecode"><span class="toc-section-number">5.3</span>  Agregar código a tu proyecto Onecode</a></li>
-  <li><a href="#modificar-el-código-para-agregar-entradas-salidas-botones-etc." id="toc-modificar-el-código-para-agregar-entradas-salidas-botones-etc." class="nav-link" data-scroll-target="#modificar-el-código-para-agregar-entradas-salidas-botones-etc."><span class="toc-section-number">5.4</span>  Modificar el código para agregar entradas, salidas, botones, etc.</a>
+  <li><a href="#transformar-jupyter-notebook-en-un-script-de-python" id="toc-transformar-jupyter-notebook-en-un-script-de-python" class="nav-link" data-scroll-target="#transformar-jupyter-notebook-en-un-script-de-python"><span class="header-section-number">5.1</span> Transformar Jupyter Notebook en un script de Python</a></li>
+  <li><a href="#preparar-el-campo-para-onecode" id="toc-preparar-el-campo-para-onecode" class="nav-link" data-scroll-target="#preparar-el-campo-para-onecode"><span class="header-section-number">5.2</span> Preparar el campo para Onecode</a></li>
+  <li><a href="#agregar-código-a-tu-proyecto-onecode" id="toc-agregar-código-a-tu-proyecto-onecode" class="nav-link" data-scroll-target="#agregar-código-a-tu-proyecto-onecode"><span class="header-section-number">5.3</span> Agregar código a tu proyecto Onecode</a></li>
+  <li><a href="#modificar-el-código-para-agregar-entradas-salidas-botones-etc." id="toc-modificar-el-código-para-agregar-entradas-salidas-botones-etc." class="nav-link" data-scroll-target="#modificar-el-código-para-agregar-entradas-salidas-botones-etc."><span class="header-section-number">5.4</span> Modificar el código para agregar entradas, salidas, botones, etc.</a>
   <ul class="collapse">
-  <li><a href="#agregar-archivos-de-entrada" id="toc-agregar-archivos-de-entrada" class="nav-link" data-scroll-target="#agregar-archivos-de-entrada"><span class="toc-section-number">5.4.1</span>  Agregar archivos de entrada</a></li>
-  <li><a href="#parámetros-de-entrada" id="toc-parámetros-de-entrada" class="nav-link" data-scroll-target="#parámetros-de-entrada"><span class="toc-section-number">5.4.2</span>  Parámetros de Entrada</a></li>
-  <li><a href="#entrada-de-holeid" id="toc-entrada-de-holeid" class="nav-link" data-scroll-target="#entrada-de-holeid"><span class="toc-section-number">5.4.3</span>  Entrada de holeID</a></li>
-  <li><a href="#imagen-de-salida" id="toc-imagen-de-salida" class="nav-link" data-scroll-target="#imagen-de-salida"><span class="toc-section-number">5.4.4</span>  Imagen de Salida</a></li>
+  <li><a href="#agregar-archivos-de-entrada" id="toc-agregar-archivos-de-entrada" class="nav-link" data-scroll-target="#agregar-archivos-de-entrada"><span class="header-section-number">5.4.1</span> Agregar archivos de entrada</a></li>
+  <li><a href="#parámetros-de-entrada" id="toc-parámetros-de-entrada" class="nav-link" data-scroll-target="#parámetros-de-entrada"><span class="header-section-number">5.4.2</span> Parámetros de Entrada</a></li>
   </ul></li>
-  <li><a href="#pruebas-en-la-aplicación-web" id="toc-pruebas-en-la-aplicación-web" class="nav-link" data-scroll-target="#pruebas-en-la-aplicación-web"><span class="toc-section-number">5.5</span>  Pruebas en la Aplicación Web</a></li>
   </ul></li>
-  <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión"><span class="toc-section-number">6</span>  Conclusión</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
+
 
 
 
@@ -295,7 +285,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="sec-MaterialCurso" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="sec-MaterialCurso"><span class="header-section-number">1.2</span> Materiales del Curso</h2>
 <p>Para facilitar tu aprendizaje, hemos proporcionado varios archivos que utilizarás a lo largo del curso. Estos archivos están disponibles a continuación:</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
 <col style="width: 38%">
@@ -379,7 +369,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 data-number="2.2" class="anchored" data-anchor-id="instalar-github-desktop"><span class="header-section-number">2.2</span> Instalar GitHub Desktop</h2>
 <p>A continuación, necesitas instalar GitHub Desktop:</p>
 <ol type="1">
-<li><p>Descarga GitHub Desktop (ver <a href="#sec-MaterialCurso">Section&nbsp;1.2</a>).</p></li>
+<li><p>Descarga GitHub Desktop (ver <a href="#sec-MaterialCurso" class="quarto-xref">Section&nbsp;1.2</a>).</p></li>
 <li><p>En la raíz de tu unidad <code>C:/</code>, crea una carpeta llamada <strong>pythonGitHub</strong>. Esta carpeta contendrá todos tus repositorios correspondientes a tus códigos.</p></li>
 <li><p>Abre GitHub Desktop y haz clic en <strong>Create a New Repository on your local drive…</strong>.</p></li>
 </ol>
@@ -404,7 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 data-number="2.3" class="anchored" data-anchor-id="instalar-git"><span class="header-section-number">2.3</span> Instalar Git</h2>
 <p>Para instalar Git, sigue estos pasos:</p>
 <ol type="1">
-<li><p>Descarga Git (ver <a href="#sec-MaterialCurso">Section&nbsp;1.2</a>).</p></li>
+<li><p>Descarga Git (ver <a href="#sec-MaterialCurso" class="quarto-xref">Section&nbsp;1.2</a>).</p></li>
 <li><p>Durante la configuración, asegúrate de seleccionar la opción <strong>Unix tools from the Command Prompt</strong>.</p></li>
 </ol>
 <p><img src="./media/Figure 2-7.png" class="img-fluid"></p>
@@ -417,19 +407,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Python es comúnmente utilizado por geólogos debido a las numerosas bibliotecas disponibles para tareas relacionadas con la geología, muchas de las cuales son de código abierto. Sin embargo, el uso extensivo de bibliotecas significa que el código a menudo necesita ser actualizado a medida que las bibliotecas se actualizan.</p>
 <p>Para este curso, instalaremos Python 3.10 porque algunas de las bibliotecas que utilizaremos (ver 3.4.2 Instalación de Bibliotecas) requieren Python 3.10. Ten en cuenta que hay versiones más nuevas de Python disponibles.</p>
 <ol type="1">
-<li>Descarga Python 3.10 (ver <a href="#sec-MaterialCurso">Section&nbsp;1.2</a>).</li>
+<li>Descarga Python 3.10 (ver <a href="#sec-MaterialCurso" class="quarto-xref">Section&nbsp;1.2</a>).</li>
 <li>Ejecuta el instalador .exe.</li>
 <li>Asegúrate de marcar la casilla <strong>Add Python 3.10 to PATH</strong> antes de hacer clic en <strong>Customize Installation</strong>. Este paso es crucial ya que hace que Python sea accesible desde la línea de comandos.</li>
 <li>Personaliza la ubicación de la instalación creando una nueva carpeta en la raíz de tu unidad C:/ llamada “Python310”. Cuanto más cerca de la raíz, más fácil será encontrarla.</li>
 <li>Haz clic en <strong>Disable path length limit</strong> y luego en <strong>Close</strong>.</li>
 </ol>
 <p><img src="./media/Figure 3-1.png" class="img-fluid"></p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -444,15 +434,15 @@ Note
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="instalación-de-visual-studio-code"><span class="header-section-number">3.2.1</span> Instalación de Visual Studio Code</h3>
 <p>Instalaremos Visual Studio Code (VS Code), un editor de código gratuito, de código abierto y potente que se ejecuta en tu escritorio y está disponible para Windows, macOS y Linux. Viene con soporte integrado para varios lenguajes, incluido Python.</p>
 <ol type="1">
-<li>Descarga Visual Studio Code (ver <a href="#sec-MaterialCurso">Section&nbsp;1.2</a>).</li>
+<li>Descarga Visual Studio Code (ver <a href="#sec-MaterialCurso" class="quarto-xref">Section&nbsp;1.2</a>).</li>
 </ol>
 <p><img src="./media/Figure 3-2.png" class="img-fluid"></p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -533,12 +523,12 @@ Note
 <div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>.\.base\Scripts\activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Verás que el entorno está activado cuando veas antes de tu línea de código <strong>(.base)</strong></p>
 <p><img src="./media/Figure 3-11.png" class="img-fluid"></p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -632,7 +622,7 @@ Note
 </section>
 <section id="atajos-de-teclado-en-jupyter-notebook" class="level3" data-number="4.1.3">
 <h3 data-number="4.1.3" class="anchored" data-anchor-id="atajos-de-teclado-en-jupyter-notebook"><span class="header-section-number">4.1.3</span> Atajos de teclado en Jupyter Notebook</h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
 <col style="width: 60%">
@@ -733,12 +723,12 @@ Note
 </ol>
 <div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load collar data to get max depths for each hole</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>collar_data <span class="op">=</span> pd.read_csv(<span class="st">'./data/collar.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -746,12 +736,12 @@ Note
 <p><code>./</code> indica una ruta relativa a la ubicación del archivo Striplog.ipynb. <code>./data</code> significa que localizará el archivo collar.csv en la ruta <code>C:/Github/Striplog/data</code>.</p>
 </div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -905,12 +895,12 @@ Note
 <ol start="32" type="1">
 <li>Ahora podemos trabajar en la representación gráfica usando la biblioteca matplotlib. Primero, configuremos la figura, esta es la cuadrícula en la que luego graficaremos los datos.</li>
 </ol>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Important
 </div>
 </div>
@@ -1085,12 +1075,12 @@ Important
 <span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>✅ Created Striplog OneCode project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Se creó lo siguiente:</p>
 <p><img src="./media/Figure 5-4.png" class="img-fluid"></p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -1126,12 +1116,12 @@ Note
 <span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Luego copiaremos todo el código debajo de <strong>def run()</strong>. Luego selecciona todo el código y asegúrate de que la indentación sea correcta como se muestra a continuación:</p>
 <p><img src="./media/Figure 5-6.png" class="img-fluid"></p>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Warning
 </div>
 </div>
@@ -1158,12 +1148,12 @@ Warning
 <div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>merged_data<span class="op">=</span>pd.read_csv(<span class="st">'./data/merged_data.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>por</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>merged_data <span class="op">=</span> csv_reader(<span class="st">'Data'</span>, <span class="st">'merged_data.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -1177,12 +1167,12 @@ Note
 <p><img src="./media/Figure 5-8.png" class="img-fluid"></p>
 <p>Busca los archivos, navega a <code>C:/Github/Striplog/data</code>, podrás visualizar los conjuntos de datos.</p>
 <p>Intenta hacer clic en <strong>Run</strong>. No hay resultados porque no hemos marcado las variables y la salida del código.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -1195,7 +1185,7 @@ Tip
 </div>
 </section>
 <section id="parámetros-de-entrada" class="level3" data-number="5.4.2">
-<h3 data-number="5.4.2" class="anchored" data-anchor-id="parámetros-de-entrada"><span class="header-section-number">5.4.2</span> Parámetros de Entrada</h3>
+<h3 data-number="5.4.2" class="anchored"><span class="header-section-number">5.4.2</span> Parámetros de Entrada</h3>
 <p>Recuerda que en el código elegimos los parámetros que queríamos graficar. Aquí lo haremos más interactivo.</p>
 <p>Busca la línea en tu código (<code>CTRL+F</code>)</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">#List the parameters to plot</span></span>
@@ -1208,8 +1198,29 @@ Tip
 <span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a> options<span class="op">=</span><span class="st">'$data$.columns'</span>,</span>
 <span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a> multiple<span class="op">=</span><span class="va">True</span></span>
 <span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>::: {.callout-note} ::: {.callout-note} El primer parámetro de la función dropdown corresponde a la <strong>clave</strong>. El segundo parámetro son los parámetros preseleccionados, podrás modificarlos en la página web. El tercer parámetro: <code>{.python}options='$data$.columns'</code> hace referencia al conjunto de datos importado y nombrado <strong>data</strong>. :::</p>
-</section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El primer parámetro de la función dropdown corresponde a la <strong>clave</strong>. El segundo parámetro son los parámetros preseleccionados, podrás modificarlos en la página web. El tercer parámetro: <code>{.python}options='$data$.columns'</code> hace referencia al conjunto de datos importado y nombrado <strong>data</strong>.</p>
+</div>
+</div>
 <section id="entrada-de-holeid" class="level3" data-number="5.4.3">
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="entrada-de-holeid"><span class="header-section-number">5.4.3</span> Entrada de holeID</h3>
 <p>Reemplaza:</p>
@@ -1224,7 +1235,6 @@ Tip
 <p>por:</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>plt.savefig(image_output(<span class="st">'figure'</span>,<span class="st">'figure.png'</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>, pad_inches<span class="op">=</span><span class="fl">0.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-</section>
 <section id="pruebas-en-la-aplicación-web" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="pruebas-en-la-aplicación-web"><span class="header-section-number">5.5</span> Pruebas en la Aplicación Web</h2>
 <ol type="1">
@@ -1237,7 +1247,6 @@ Tip
 <li>Haz clic en <strong>Run</strong>. En <strong>data</strong> podrás visualizar tus resultados.</li>
 </ol>
 </section>
-</section>
 <section id="conclusión" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Conclusión</h1>
 <p>Ahora deberías tener las herramientas necesarias para crear tus propios scripts.</p>
@@ -1247,6 +1256,11 @@ Tip
 <p>También puedes conectarte a este repositorio para buscar funciones que se han desarrollado dentro de SRK CL <a href="https://srkfunctionrepository.azurewebsites.net/">aquí</a>. También puedes subir tus propias creaciones.</p>
 
 
+</section>
+</div>
+</div>
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1277,12 +1291,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1314,11 +1331,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1328,8 +1384,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1341,9 +1406,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1384,6 +1685,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">Copyright © Consulting (Chile) S.A. 2024. All Rights reserved.
+</footer>
+
 
 
 

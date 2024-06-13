@@ -3,9 +3,9 @@ project:
   output-dir: docs
 
 website:
-  title: "StartCodingToday"
+  title: '<img src="media/SRKLogo.svg" alt="SRK Consulting" style="height: 30px;">'
   navbar:
-    left:
+    right:
       - text: Span
         href: StartCodingToday_Span.qmd
       - text: Eng
